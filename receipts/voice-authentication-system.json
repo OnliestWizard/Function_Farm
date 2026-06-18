@@ -1,0 +1,46 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/Voice-Vault",
+      "path": "sdk/index.js",
+      "lines": "1-29"
+    },
+    {
+      "repo": "OnliestWizard/Voice-Vault",
+      "path": "server/index.js",
+      "lines": "1-44"
+    }
+  ],
+  "improvements": [
+    "Persistent database for storing embeddings",
+    "Enhanced security measures such as encryption"
+  ],
+  "removals": [
+    "In-memory database usage"
+  ],
+  "confidence": 0.9,
+  "lineage": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 17893,
+    "outputTokens": 1637,
+    "costUsd": 0.0611025
+  },
+  "inputs": [
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/Voice-Vault",
+      "path": "sdk/index.js",
+      "lines": "1-29",
+      "contributed": "Client SDK for interacting with voice authentication server."
+    },
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/Voice-Vault",
+      "path": "server/index.js",
+      "lines": "1-44",
+      "contributed": "Server logic for handling enroll and verify requests."
+    }
+  ]
+}

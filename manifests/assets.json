@@ -6,5 +6,13 @@
     "targetPath": "syntheses/web/cameraCapture/CameraCapture.js",
     "status": "approved",
     "confidence": 0.9
+  },
+  {
+    "id": "voice-authentication-system",
+    "title": "Voice-Based Authentication System",
+    "category": "Authentication",
+    "targetPath": "syntheses/auth/voiceAuthentication/index.js",
+    "status": "approved",
+    "confidence": 0.9
   }
 ]
