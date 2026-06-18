@@ -1,0 +1,35 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/components/CameraCapture.js",
+      "lines": "1-151"
+    }
+  ],
+  "improvements": [
+    "Added robust error handling and customizable features."
+  ],
+  "removals": [
+    "Simplified redundant code for ease of use."
+  ],
+  "confidence": 0.9,
+  "lineage": [
+    "Improved navigation and error management from read files."
+  ],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 95811,
+    "outputTokens": 2653,
+    "costUsd": 0.2660575
+  },
+  "inputs": [
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/SafetySnap",
+      "path": "app/components/CameraCapture.js",
+      "lines": "1-151",
+      "contributed": "Contains foundational camera capture logic with adaptable features for web app integration."
+    }
+  ]
+}

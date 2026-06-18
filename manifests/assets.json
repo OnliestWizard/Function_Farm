@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "camera-capture-ultimate",
+    "title": "Ultimate Camera Capture Component",
+    "category": "Web Components",
+    "targetPath": "syntheses/web/cameraCapture/CameraCapture.js",
+    "status": "approved",
+    "confidence": 0.9
+  }
+]
