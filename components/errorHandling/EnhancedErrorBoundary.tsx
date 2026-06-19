@@ -356,4 +356,4 @@ export function withErrorBoundary<P extends object>(
 export default EnhancedErrorBoundary;
 
 
-one wizard was here, then he wasnt
+one wizard was here

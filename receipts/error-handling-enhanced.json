@@ -13,7 +13,8 @@
   "confidence": 0.95,
   "lineage": [
     "Manually tuned",
-    "Manually tuned"
+    "Manually tuned",
+    "Rolled back to 1781865344000_6fabba94"
   ],
   "usage": {
     "provider": "openai",
