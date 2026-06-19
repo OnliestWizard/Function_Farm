@@ -92,5 +92,3 @@ export default function CameraCapture({
     </div>
   );
 }
-
-test line here
