@@ -24,7 +24,8 @@
     "Rolled back to 1781832371000_a9fef141",
     "Rolled back to 1781831107000_a9fef141",
     "Rolled back to 1781776020000_a9fef141",
-    "Rolled back to 1781832041000_a9fef141"
+    "Rolled back to 1781832041000_a9fef141",
+    "Rolled back to 1781863788000_a9fef141"
   ],
   "usage": {
     "provider": "openai",
@@ -42,5 +43,5 @@
       "contributed": "Contains foundational camera capture logic with adaptable features for web app integration."
     }
   ],
-  "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c"
+  "digest": "4f4ba54d930612be47360585d8438af15ee6f7db066c19eb250500a167370514"
 }
