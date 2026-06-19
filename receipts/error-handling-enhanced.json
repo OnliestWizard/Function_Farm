@@ -1,0 +1,32 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/CrunchChat",
+      "path": "src/components/ErrorBoundary.tsx",
+      "lines": "1-243"
+    }
+  ],
+  "improvements": [
+    "Integrated a secure audit logging mechanism"
+  ],
+  "removals": [],
+  "confidence": 0.95,
+  "lineage": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 25820,
+    "outputTokens": 3207,
+    "costUsd": 0.09662
+  },
+  "inputs": [
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/CrunchChat",
+      "path": "src/components/ErrorBoundary.tsx",
+      "lines": "1-243",
+      "contributed": "Integrated secure audit logger and enhanced fallback UI for error feedback"
+    }
+  ],
+  "digest": "6fabba9490502e124f9cf536b593cce1da030cb0ff311a376de785da5c56ddb5"
+}
