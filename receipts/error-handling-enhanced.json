@@ -11,7 +11,9 @@
   ],
   "removals": [],
   "confidence": 0.95,
-  "lineage": [],
+  "lineage": [
+    "Manually tuned"
+  ],
   "usage": {
     "provider": "openai",
     "model": "gpt-4o",
