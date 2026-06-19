@@ -1,5 +1,12 @@
 [
   {
+    "version": "1781861011000_a9fef141",
+    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "commitSha": "a99805da0b2e39e19638342179afe2f2aad70230",
+    "timestamp": 1781861011000,
+    "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
+  },
+  {
     "version": "1781832371000_a9fef141",
     "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
     "commitSha": "52c5cca19847fcf18e7a9101abbc32eac1205c5c",
@@ -14,10 +21,10 @@
     "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
   },
   {
-    "version": "1781831109061_a9fef141",
+    "version": "1781831107000_a9fef141",
     "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
     "commitSha": "0b0d31130da89140911bb8ba58419eca197c7d7b",
-    "timestamp": 1781831109061,
+    "timestamp": 1781831107000,
     "note": "Manually tuned"
   },
   {
