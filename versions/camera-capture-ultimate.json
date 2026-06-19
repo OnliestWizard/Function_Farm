@@ -1,63 +1,70 @@
 [
   {
-    "version": "1781863834000_a9fef141",
-    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "version": "1781865185000_69dd019f",
+    "digest": "69dd019f8e3ad28a1b9eb4761a0299c39e8733b83b94292a6f766aa1359fb050",
+    "commitSha": "433392563877ed18494e7d4eac7f77e90023d55a",
+    "timestamp": 1781865185000,
+    "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
+  },
+  {
+    "version": "1781863834000_b9231d6e",
+    "digest": "b9231d6e8042f9201a38bc9f292c04a1c5ce042c2f60055d5be8ab4cb07ae176",
     "commitSha": "0de37648bfd8944fdc8391c1eb0e26caa5149b6e",
     "timestamp": 1781863834000,
     "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
   },
   {
-    "version": "1781863811000_a9fef141",
-    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "version": "1781863811000_cc3598de",
+    "digest": "cc3598de8ec415d5275b54d5d640bf8ab75443c47ec92be764aa9cbc5ecbac75",
     "commitSha": "80823e68fedb61cc5867d948db2eb66fb1e73733",
     "timestamp": 1781863811000,
     "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
   },
   {
-    "version": "1781863788000_a9fef141",
-    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "version": "1781863788000_4f4ba54d",
+    "digest": "4f4ba54d930612be47360585d8438af15ee6f7db066c19eb250500a167370514",
     "commitSha": "04fcb55f2b20c6675dc34ad4ab87894d731979de",
     "timestamp": 1781863788000,
     "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
   },
   {
-    "version": "1781863716000_a9fef141",
-    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "version": "1781863716000_18596ce1",
+    "digest": "18596ce1b8d451ab26e0f17f4da8620cba59cd77b462d0aa37d49b0899ae02e7",
     "commitSha": "d1d9320378a8dc39c8fe07a785bb0fcfd2c7c2b6",
     "timestamp": 1781863716000,
     "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
   },
   {
-    "version": "1781861011000_a9fef141",
-    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "version": "1781861011000_cc3598de",
+    "digest": "cc3598de8ec415d5275b54d5d640bf8ab75443c47ec92be764aa9cbc5ecbac75",
     "commitSha": "a99805da0b2e39e19638342179afe2f2aad70230",
     "timestamp": 1781861011000,
     "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
   },
   {
-    "version": "1781832371000_a9fef141",
-    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "version": "1781832371000_4f4ba54d",
+    "digest": "4f4ba54d930612be47360585d8438af15ee6f7db066c19eb250500a167370514",
     "commitSha": "52c5cca19847fcf18e7a9101abbc32eac1205c5c",
     "timestamp": 1781832371000,
     "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
   },
   {
-    "version": "1781832041000_a9fef141",
-    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "version": "1781832041000_69dd019f",
+    "digest": "69dd019f8e3ad28a1b9eb4761a0299c39e8733b83b94292a6f766aa1359fb050",
     "commitSha": "e108f9f525c23e427bf7f87a5a6ce0506c759fd6",
     "timestamp": 1781832041000,
     "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
   },
   {
-    "version": "1781831107000_a9fef141",
-    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "version": "1781831107000_cc3598de",
+    "digest": "cc3598de8ec415d5275b54d5d640bf8ab75443c47ec92be764aa9cbc5ecbac75",
     "commitSha": "0b0d31130da89140911bb8ba58419eca197c7d7b",
     "timestamp": 1781831107000,
     "note": "Manually tuned"
   },
   {
-    "version": "1781776020000_a9fef141",
-    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c",
+    "version": "1781776020000_b9231d6e",
+    "digest": "b9231d6e8042f9201a38bc9f292c04a1c5ce042c2f60055d5be8ab4cb07ae176",
     "commitSha": "59368e48b607da3e21803b0a507888709249374d",
     "timestamp": 1781776020000,
     "note": "Approve Ultimate Camera Capture Component (camera-capture-ultimate)"
