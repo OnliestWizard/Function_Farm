@@ -17,7 +17,8 @@
     "Improved navigation and error management from read files.",
     "Manually tuned",
     "Manually tuned",
-    "Manually tuned"
+    "Manually tuned",
+    "Rolled back to 1781831109061_a9fef141"
   ],
   "usage": {
     "provider": "openai",
