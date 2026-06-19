@@ -1,0 +1,67 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/api/voice-form/route.js",
+      "lines": "0-500"
+    },
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/api/send-email/route.js",
+      "lines": "0-500"
+    },
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/api/format-report/route.js",
+      "lines": "0-500"
+    }
+  ],
+  "improvements": [
+    "Integrated multiple functionalities into a single cohesive pipeline",
+    "Enhanced authentication and error handling mechanisms"
+  ],
+  "removals": [
+    "Removed redundant code pieces and consolidated similar functionalities"
+  ],
+  "confidence": 0.9,
+  "lineage": [
+    "Built on code from SafetySnap repository's email, voice processing, and report formatting features"
+  ],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 42691,
+    "outputTokens": 1337,
+    "costUsd": 0.1200975
+  },
+  "inputs": [
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/SafetySnap",
+      "path": "app/api/voice-form/route.js",
+      "lines": "0-500",
+      "contributed": "Process and validate voice input to generate a structured report format."
+    },
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/SafetySnap",
+      "path": "app/api/send-email/route.js",
+      "lines": "0-500",
+      "contributed": "Send processed reports via email, including handling for attachments."
+    },
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/SafetySnap",
+      "path": "app/api/format-report/route.js",
+      "lines": "0-500",
+      "contributed": "Format raw input fields into a professional report structure."
+    }
+  ],
+  "confidenceMatrix": [
+    {
+      "dimension": "completeness",
+      "score": 0.95
+    }
+  ],
+  "digest": "7cf98905bfb6ff16ae682db0033a8cc22c30dc08f4f58c4cfe29714e194e0b4c"
+}

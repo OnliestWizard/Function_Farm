@@ -14,5 +14,17 @@
     "targetPath": "syntheses/auth/voiceAuthentication/index.js",
     "status": "approved",
     "confidence": 0.9
+  },
+  {
+    "id": "voice-email-pipeline",
+    "title": "Voice to Email Report Pipeline",
+    "category": "Data Processing",
+    "targetPath": "syntheses/data-processing/voiceEmailPipeline.js",
+    "status": "approved",
+    "confidence": 0.9,
+    "digest": "7cf98905bfb6ff16ae682db0033a8cc22c30dc08f4f58c4cfe29714e194e0b4c",
+    "relatesTo": [
+      "voice-authentication-system"
+    ]
   }
 ]
