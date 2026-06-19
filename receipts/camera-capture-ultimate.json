@@ -15,6 +15,7 @@
   "confidence": 0.9,
   "lineage": [
     "Improved navigation and error management from read files.",
+    "Manually tuned",
     "Manually tuned"
   ],
   "usage": {
