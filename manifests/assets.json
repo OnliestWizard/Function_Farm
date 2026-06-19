@@ -5,7 +5,8 @@
     "category": "Web Components",
     "targetPath": "syntheses/web/cameraCapture/CameraCapture.js",
     "status": "approved",
-    "confidence": 0.9
+    "confidence": 0.9,
+    "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c"
   },
   {
     "id": "voice-authentication-system",

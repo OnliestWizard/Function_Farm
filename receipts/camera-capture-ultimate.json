@@ -14,7 +14,8 @@
   ],
   "confidence": 0.9,
   "lineage": [
-    "Improved navigation and error management from read files."
+    "Improved navigation and error management from read files.",
+    "Manually tuned"
   ],
   "usage": {
     "provider": "openai",
@@ -31,5 +32,6 @@
       "lines": "1-151",
       "contributed": "Contains foundational camera capture logic with adaptable features for web app integration."
     }
-  ]
+  ],
+  "digest": "a9fef141755e422d38116fd44677ac9f914734af5fcbdd652fbb1c2bc215319c"
 }
