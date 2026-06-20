@@ -3,45 +3,38 @@
     {
       "repo": "OnliestWizard/SafetySnap",
       "path": "app/components/CameraCapture.js",
-      "lines": "1-151"
+      "lines": "1-158"
     }
   ],
   "improvements": [
-    "Added robust error handling and customizable features."
+    "Improved error handling by stopping camera on errors and calling onSkip.",
+    "Merged best practices from SafetySnap and enhanced versions."
   ],
-  "removals": [
-    "Simplified redundant code for ease of use."
-  ],
-  "confidence": 0.9,
-  "lineage": [
-    "Improved navigation and error management from read files.",
-    "Manually tuned",
-    "Manually tuned",
-    "Manually tuned",
-    "Rolled back to 1781831109061_a9fef141",
-    "Rolled back to 1781831109061_a9fef141",
-    "Manually tuned",
-    "Rolled back to 1781832371000_a9fef141",
-    "Rolled back to 1781831107000_a9fef141",
-    "Rolled back to 1781776020000_a9fef141",
-    "Rolled back to 1781832041000_a9fef141",
-    "Rolled back to 1781863788000_a9fef141"
-  ],
+  "removals": [],
+  "confidence": 0.95,
+  "lineage": [],
   "usage": {
     "provider": "openai",
     "model": "gpt-4o",
-    "inputTokens": 95811,
-    "outputTokens": 2653,
-    "costUsd": 0.2660575
+    "inputTokens": 30500,
+    "outputTokens": 3000,
+    "costUsd": 0.10625
   },
   "inputs": [
+    {
+      "kind": "asset",
+      "ref": "camera-capture-enhanced",
+      "path": "",
+      "lines": "1-158",
+      "contributed": "Base structure and component interface structure."
+    },
     {
       "kind": "repo",
       "ref": "OnliestWizard/SafetySnap",
       "path": "app/components/CameraCapture.js",
-      "lines": "1-151",
-      "contributed": "Contains foundational camera capture logic with adaptable features for web app integration."
+      "lines": "1-158",
+      "contributed": "Implementation enhancements and error handling adjustments."
     }
   ],
-  "digest": "4f4ba54d930612be47360585d8438af15ee6f7db066c19eb250500a167370514"
+  "digest": "0cc8eaaed528b99b7488013c9319cc0c45d6506b970cd356ba7979ef274b4173"
 }
