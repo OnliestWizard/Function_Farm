@@ -4,7 +4,7 @@
     "title": "Ultimate Camera Capture Component",
     "category": "Web Components",
     "targetPath": "syntheses/web/cameraCapture/CameraCapture.js",
-    "status": "approved",
+    "status": "superseded",
     "confidence": 0.9,
     "digest": "4f4ba54d930612be47360585d8438af15ee6f7db066c19eb250500a167370514"
   },
@@ -56,5 +56,27 @@
         "Context API"
       ]
     }
+  },
+  {
+    "id": "camera-capture-enhanced",
+    "title": "Enhanced Camera Capture Component",
+    "category": "Web Components",
+    "targetPath": "syntheses/web/cameraCapture/EnhancedCameraCapture.js",
+    "status": "approved",
+    "confidence": 0.95,
+    "digest": "454f06d924ecc3cd923e0d7eeea648112203ac6abb461dc29edd8aa7adbc8dcb",
+    "profile": {
+      "language": "JavaScript",
+      "targets": [
+        "web"
+      ],
+      "format": "React Component",
+      "uiDirectives": [
+        "React Hooks"
+      ]
+    },
+    "supersedes": [
+      "camera-capture-ultimate"
+    ]
   }
 ]

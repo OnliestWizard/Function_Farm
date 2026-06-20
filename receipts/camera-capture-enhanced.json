@@ -1,0 +1,90 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/components/CameraCapture.js",
+      "lines": "1-161"
+    },
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/hooks/useMicrophoneRecorder.js",
+      "lines": "1-137"
+    }
+  ],
+  "improvements": [
+    "Improved error handling for camera access",
+    "Streamlined UI elements for a better user experience"
+  ],
+  "removals": [
+    "Unused dependencies and redundant code paths"
+  ],
+  "confidence": 0.95,
+  "lineage": [
+    "This builds upon the previous 'Ultimate Camera Capture Component' asset."
+  ],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 31962,
+    "outputTokens": 1621,
+    "costUsd": 0.096115
+  },
+  "inputs": [
+    {
+      "kind": "asset",
+      "ref": "camera-capture-ultimate",
+      "path": "syntheses/web/cameraCapture/CameraCapture.js",
+      "lines": "",
+      "contributed": "Initial implementation with basic functionality."
+    },
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/SafetySnap",
+      "path": "app/components/CameraCapture.js",
+      "lines": "1-161",
+      "contributed": "Improved error handling and user interaction features."
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "onCapture",
+        "type": "function"
+      },
+      {
+        "name": "onSkip",
+        "type": "function"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "default": "\"Take Photo\""
+      },
+      {
+        "name": "allowSkip",
+        "type": "boolean",
+        "default": "true"
+      },
+      {
+        "name": "facingMode",
+        "type": "string",
+        "default": "\"environment\""
+      }
+    ],
+    "outputs": [],
+    "dependencies": [
+      "lucide-react"
+    ]
+  },
+  "confidenceMatrix": [
+    {
+      "dimension": "completeness",
+      "score": 0.8
+    },
+    {
+      "dimension": "usability",
+      "score": 0.95
+    }
+  ],
+  "digest": "454f06d924ecc3cd923e0d7eeea648112203ac6abb461dc29edd8aa7adbc8dcb"
+}
