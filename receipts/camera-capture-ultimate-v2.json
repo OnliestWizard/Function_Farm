@@ -1,0 +1,82 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/components/CameraCapture.js",
+      "lines": "1-163"
+    }
+  ],
+  "improvements": [
+    "Unified and improved error handling",
+    "Optimized camera stream management"
+  ],
+  "removals": [
+    "Redundant state checks",
+    "Unused icons and styles"
+  ],
+  "confidence": 0.95,
+  "lineage": [
+    "Merged from previous CameraCapture implementations."
+  ],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 25872,
+    "outputTokens": 2835,
+    "costUsd": 0.09303
+  },
+  "inputs": [
+    {
+      "kind": "asset",
+      "ref": "camera-capture-enhanced",
+      "path": "syntheses/web/cameraCapture/EnhancedCameraCapture.js",
+      "lines": "1-163",
+      "contributed": "Enhanced error handling and streamlined state management."
+    },
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/SafetySnap",
+      "path": "app/components/CameraCapture.js",
+      "lines": "1-163",
+      "contributed": "Base structure and essential functionality for capturing a photo using the camera."
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "onCapture",
+        "type": "function"
+      },
+      {
+        "name": "onSkip",
+        "type": "function"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "default": "Take Photo"
+      },
+      {
+        "name": "allowSkip",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "name": "facingMode",
+        "type": "string",
+        "default": "environment"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "onCapture",
+        "type": "string",
+        "emits": "image/jpeg dataURL"
+      }
+    ],
+    "dependencies": [
+      "lucide-react"
+    ]
+  },
+  "digest": "dea092bc053edc7a49fb3cf66d632b603d6e23573d3850340f5ef4ae03e80790"
+}
