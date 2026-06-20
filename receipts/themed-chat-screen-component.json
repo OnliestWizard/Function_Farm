@@ -1,0 +1,58 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/Cairn",
+      "path": "app/src/ui/ChatScreen.tsx",
+      "lines": "1-500"
+    },
+    {
+      "repo": "OnliestWizard/Cairn",
+      "path": "app/src/ui/ThemeContext.tsx",
+      "lines": "1-20"
+    }
+  ],
+  "improvements": [
+    "Improved code organization for theme and state management."
+  ],
+  "removals": [],
+  "confidence": 0.95,
+  "lineage": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 150686,
+    "outputTokens": 6139,
+    "costUsd": 0.438105
+  },
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "theme",
+        "type": "Theme"
+      },
+      {
+        "name": "language",
+        "type": "Language"
+      },
+      {
+        "name": "mood",
+        "type": "Mood"
+      },
+      {
+        "name": "density",
+        "type": "Density"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "rendered_ui",
+        "type": "JSX.Element"
+      }
+    ],
+    "dependencies": [
+      "react-native",
+      "react-native-safe-area-context"
+    ]
+  },
+  "digest": "ad224a39b1412d4d06b4bf4fe0945820e109dec460d24dc3538c0c1ebcf05973"
+}
