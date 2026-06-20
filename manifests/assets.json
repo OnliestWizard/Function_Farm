@@ -100,5 +100,25 @@
     "relatesTo": [
       "camera-capture-enhanced"
     ]
+  },
+  {
+    "id": "new-inspection-report-generator",
+    "title": "Inspection Report Generator Component",
+    "category": "Web Components",
+    "targetPath": "components/web/InspectionReportGenerator/index.js",
+    "status": "approved",
+    "confidence": 0.9,
+    "digest": "bd30d10246a6533008f68f7bd8a4feb9a202fb752348ac2728a6f620d7a54e2b",
+    "profile": {
+      "language": "JavaScript",
+      "targets": [
+        "web"
+      ],
+      "format": "React Component",
+      "framework": "React"
+    },
+    "relatesTo": [
+      "camera-capture-ultimate"
+    ]
   }
 ]
