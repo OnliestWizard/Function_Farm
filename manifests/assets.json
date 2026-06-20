@@ -78,5 +78,27 @@
     "supersedes": [
       "camera-capture-ultimate"
     ]
+  },
+  {
+    "id": "inspection-report-generator",
+    "title": "Inspection Report Generator",
+    "category": "Web Components",
+    "targetPath": "components/web/inspectionReportGenerator.js",
+    "status": "approved",
+    "confidence": 0.9,
+    "digest": "73530e648c77c4279e2bb8c5622130ebb74589ff46d2d88e837aaff82de68c51",
+    "profile": {
+      "language": "JavaScript",
+      "targets": [
+        "web"
+      ],
+      "format": "React Component",
+      "uiDirectives": [
+        "React"
+      ]
+    },
+    "relatesTo": [
+      "camera-capture-enhanced"
+    ]
   }
 ]

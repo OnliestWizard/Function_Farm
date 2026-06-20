@@ -1,0 +1,59 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/components/ReportsView.js",
+      "lines": "1-748"
+    }
+  ],
+  "improvements": [
+    "Implemented PDF export functionality."
+  ],
+  "removals": [],
+  "confidence": 0.9,
+  "lineage": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 27286,
+    "outputTokens": 2031,
+    "costUsd": 0.088525
+  },
+  "inputs": [
+    {
+      "kind": "asset",
+      "ref": "camera-capture-enhanced",
+      "path": "syntheses/web/cameraCapture/EnhancedCameraCapture.js",
+      "lines": "9-80",
+      "contributed": "Seamless integration with the photo capturing capability."
+    },
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/SafetySnap",
+      "path": "app/components/ReportsView.js",
+      "lines": "1-748",
+      "contributed": "Concept and layout for report handling and display."
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "notes",
+        "type": "string"
+      },
+      {
+        "name": "onCapture",
+        "type": "function"
+      }
+    ],
+    "outputs": [],
+    "dependencies": [
+      "pdf-lib"
+    ]
+  },
+  "digest": "73530e648c77c4279e2bb8c5622130ebb74589ff46d2d88e837aaff82de68c51"
+}
