@@ -1,0 +1,67 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/components/ReportsView.js",
+      "lines": "1-580"
+    }
+  ],
+  "improvements": [
+    "Integrates jsPDF for PDF output",
+    "Self-contained, no backend required"
+  ],
+  "removals": [
+    "Removes need for backend interactions"
+  ],
+  "confidence": 0.95,
+  "lineage": [
+    "Enhances legacy systems for creating inspection reports with embedded images"
+  ],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 29058,
+    "outputTokens": 877,
+    "costUsd": 0.081415
+  },
+  "inputs": [
+    {
+      "kind": "asset",
+      "ref": "camera-capture-ultimate-v2",
+      "path": "syntheses/web/cameraCapture/UltimateCameraCaptureComponentV2.js",
+      "lines": "1-125",
+      "contributed": "Feeds photoUrl for report embedding"
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "photoUrl",
+        "type": "string"
+      },
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "notes",
+        "type": "string"
+      }
+    ],
+    "outputs": [],
+    "dependencies": [
+      "jspdf"
+    ]
+  },
+  "confidenceMatrix": [
+    {
+      "dimension": "completeness",
+      "score": 0.9
+    },
+    {
+      "dimension": "integration",
+      "score": 0.95
+    }
+  ],
+  "digest": "f425464aec1288354c1b4f1d9276ee715a3bc1b9d286656e3d1589e433105d9c"
+}
