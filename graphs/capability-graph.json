@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782035500784,
+  "generatedAt": 1782039421947,
   "nodes": [
     {
       "id": "camera-capture-ultimate",
@@ -93,6 +93,34 @@
         "format": "React Component",
         "framework": "React"
       }
+    },
+    {
+      "id": "camera-photo-report-generator",
+      "title": "Camera Photo Report Generator",
+      "category": "Web Components",
+      "profile": {
+        "language": "JavaScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "framework": "React"
+      }
+    },
+    {
+      "id": "image-cropper-component",
+      "title": "Image Cropper Component",
+      "category": "UI Components",
+      "profile": {
+        "language": "TypeScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "uiDirectives": [
+          "React Hooks"
+        ]
+      }
     }
   ],
   "edges": [
@@ -120,6 +148,17 @@
     },
     {
       "from": "camera-capture-ultimate-v2",
+      "to": "image-cropper-component",
+      "fromPort": "onCapture",
+      "toPort": "image",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.85
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
       "to": "inspection-report-generator",
       "fromPort": "onCapture",
       "toPort": "title",
@@ -173,6 +212,16 @@
       "to": "inspection-report-generator-enhanced",
       "fromPort": "onCapture",
       "toPort": "notes",
+      "type": "string",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.4
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "camera-photo-report-generator",
+      "fromPort": "onCapture",
+      "toPort": "title",
       "type": "string",
       "emits": "image/jpeg dataURL",
       "verified": false,
