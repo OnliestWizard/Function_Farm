@@ -1,0 +1,84 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "uiwjs/react-md-editor",
+      "path": "core/src/index.tsx",
+      "lines": "1-21"
+    },
+    {
+      "repo": "uiwjs/react-md-editor",
+      "path": "core/src/Editor.tsx",
+      "lines": "1-5"
+    },
+    {
+      "repo": "uiwjs/react-md-editor",
+      "path": "core/src/components/TextArea/index.tsx",
+      "lines": "1-5"
+    },
+    {
+      "repo": "uiwjs/react-md-editor",
+      "path": "core/src/components/TextArea/factory.tsx",
+      "lines": "1-96"
+    }
+  ],
+  "improvements": [
+    "Bundled into a single concise component suitable for use in any React app"
+  ],
+  "removals": [
+    "Removed context and non-essential options for simplicity"
+  ],
+  "confidence": 0.95,
+  "lineage": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 42562,
+    "outputTokens": 1461,
+    "costUsd": 0.121015
+  },
+  "inputs": [
+    {
+      "kind": "repo",
+      "ref": "uiwjs/react-md-editor",
+      "path": "core/src/index.tsx",
+      "lines": "1-21",
+      "contributed": "Exported MDEditor and other utilities"
+    },
+    {
+      "kind": "repo",
+      "ref": "uiwjs/react-md-editor",
+      "path": "core/src/Editor.tsx",
+      "lines": "1-5",
+      "contributed": "Defined markdown editor creation"
+    },
+    {
+      "kind": "repo",
+      "ref": "uiwjs/react-md-editor",
+      "path": "core/src/components/TextArea/index.tsx",
+      "lines": "1-5",
+      "contributed": "Created text area component integration"
+    },
+    {
+      "kind": "repo",
+      "ref": "uiwjs/react-md-editor",
+      "path": "core/src/components/TextArea/factory.tsx",
+      "lines": "1-96",
+      "contributed": "Implemented text area rendering and hooks"
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "value",
+        "type": "string",
+        "canonical": "MarkdownText",
+        "verified": false
+      }
+    ],
+    "outputs": [],
+    "dependencies": [
+      "react"
+    ]
+  },
+  "digest": "166da899c6e7eaf7ea7838554d9f556d16fee46587211ededfbc148a09c09624"
+}
