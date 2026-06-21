@@ -215,5 +215,21 @@
       "format": "React Component",
       "framework": "React"
     }
+  },
+  {
+    "id": "markdown-renderer",
+    "title": "Markdown Renderer",
+    "category": "Rendering",
+    "targetPath": "syntheses/markdown_renderer/index.js",
+    "status": "approved",
+    "confidence": 1,
+    "digest": "78a89d66c0a95730e051d5d697bb68882d6be14bde0e8e9db31aa591e6c51832",
+    "profile": {
+      "language": "JavaScript",
+      "targets": [
+        "web"
+      ],
+      "framework": "React"
+    }
   }
 ]

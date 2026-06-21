@@ -1,0 +1,56 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "remarkjs/react-markdown",
+      "path": "index.js",
+      "lines": "1-12"
+    },
+    {
+      "repo": "remarkjs/react-markdown",
+      "path": "lib/index.js",
+      "lines": "1-572"
+    }
+  ],
+  "improvements": [
+    "Simplified the API to focus solely on React rendering from Markdown input."
+  ],
+  "removals": [
+    "Removed unrelated configuration options to ensure focus on Markdown string rendering."
+  ],
+  "confidence": 1,
+  "lineage": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 14580,
+    "outputTokens": 1083,
+    "costUsd": 0.04728
+  },
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "markdown",
+        "type": "string",
+        "verified": true,
+        "canonical": "MarkdownText"
+      }
+    ],
+    "outputs": [],
+    "dependencies": [
+      "react",
+      "unified",
+      "remark-parse",
+      "remark-rehype",
+      "vfile",
+      "hast-util-to-jsx-runtime",
+      "react/jsx-runtime"
+    ]
+  },
+  "confidenceMatrix": [
+    {
+      "dimension": "completeness",
+      "score": 0.9
+    }
+  ],
+  "digest": "78a89d66c0a95730e051d5d697bb68882d6be14bde0e8e9db31aa591e6c51832"
+}
