@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": 1782034046218,
+  "nodes": [
+    {
+      "id": "camera-capture-ultimate",
+      "title": "Ultimate Camera Capture Component",
+      "category": "Web Components"
+    },
+    {
+      "id": "voice-authentication-system",
+      "title": "Voice-Based Authentication System",
+      "category": "Authentication"
+    },
+    {
+      "id": "voice-email-pipeline",
+      "title": "Voice to Email Report Pipeline",
+      "category": "Data Processing"
+    },
+    {
+      "id": "error-handling-enhanced",
+      "title": "Enhanced React Error Boundary",
+      "category": "Error Handling"
+    },
+    {
+      "id": "themed-chat-screen-component",
+      "title": "Themed Chat Screen Component",
+      "category": "UI Components",
+      "profile": {
+        "language": "TypeScript",
+        "targets": [
+          "mobile"
+        ],
+        "framework": "React Native",
+        "uiDirectives": [
+          "React Hooks",
+          "Context API"
+        ]
+      }
+    },
+    {
+      "id": "inspection-report-generator",
+      "title": "Inspection Report Generator",
+      "category": "Web Components",
+      "profile": {
+        "language": "JavaScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "uiDirectives": [
+          "React"
+        ]
+      }
+    },
+    {
+      "id": "new-inspection-report-generator",
+      "title": "Inspection Report Generator Component",
+      "category": "Web Components",
+      "profile": {
+        "language": "JavaScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "framework": "React"
+      }
+    },
+    {
+      "id": "camera-capture-ultimate-v2",
+      "title": "Ultimate Camera Capture Component",
+      "category": "Web Components",
+      "profile": {
+        "language": "JavaScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "uiDirectives": [
+          "React Hooks"
+        ]
+      }
+    },
+    {
+      "id": "inspection-report-generator-enhanced",
+      "title": "Photo-Based Inspection Report Generator",
+      "category": "Web Components",
+      "profile": {
+        "language": "JavaScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "framework": "React"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onCapture",
+      "toPort": "photoUrl",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.875
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onCapture",
+      "toPort": "photoUrl",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.875
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "inspection-report-generator",
+      "fromPort": "onCapture",
+      "toPort": "title",
+      "type": "string",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.4
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "inspection-report-generator",
+      "fromPort": "onCapture",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.4
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onCapture",
+      "toPort": "title",
+      "type": "string",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.4
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onCapture",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.4
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onCapture",
+      "toPort": "title",
+      "type": "string",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.4
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onCapture",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.4
+    }
+  ]
+}
