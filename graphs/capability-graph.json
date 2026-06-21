@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782039421947,
+  "generatedAt": 1782041175219,
   "nodes": [
     {
       "id": "camera-capture-ultimate",
@@ -121,6 +121,46 @@
           "React Hooks"
         ]
       }
+    },
+    {
+      "id": "markdown-editor-synthesis",
+      "title": "Reusable Markdown Editor Component",
+      "category": "UI Components",
+      "profile": {
+        "language": "TypeScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "framework": "React"
+      }
+    },
+    {
+      "id": "markdown-renderer",
+      "title": "Markdown Renderer",
+      "category": "Rendering",
+      "profile": {
+        "language": "JavaScript",
+        "targets": [
+          "web"
+        ],
+        "framework": "React"
+      }
+    },
+    {
+      "id": "image-editor-component",
+      "title": "Image Editor Component",
+      "category": "UI Components",
+      "profile": {
+        "language": "TypeScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "uiDirectives": [
+          "React Hooks"
+        ]
+      }
     }
   ],
   "edges": [
@@ -149,6 +189,17 @@
     {
       "from": "camera-capture-ultimate-v2",
       "to": "image-cropper-component",
+      "fromPort": "onCapture",
+      "toPort": "image",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "image/jpeg dataURL",
+      "verified": false,
+      "score": 0.85
+    },
+    {
+      "from": "camera-capture-ultimate-v2",
+      "to": "image-editor-component",
       "fromPort": "onCapture",
       "toPort": "image",
       "type": "string",
