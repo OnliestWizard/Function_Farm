@@ -204,7 +204,7 @@
     "title": "Reusable Markdown Editor Component",
     "category": "UI Components",
     "targetPath": "syntheses/components/MarkdownEditor.tsx",
-    "status": "approved",
+    "status": "superseded",
     "confidence": 0.95,
     "digest": "166da899c6e7eaf7ea7838554d9f556d16fee46587211ededfbc148a09c09624",
     "profile": {
@@ -250,5 +250,25 @@
         "React Hooks"
       ]
     }
+  },
+  {
+    "id": "markdown-editor-enhanced-v2",
+    "title": "Enhanced Markdown Editor Component V2",
+    "category": "UI Components",
+    "targetPath": "syntheses/components/MarkdownEditorV2.tsx",
+    "status": "approved",
+    "confidence": 0.9,
+    "digest": "8a9ad3b7e498d18235d2cdf7c3a9b0ff0c8b5508f0ed60deb9e592f2354e0c01",
+    "profile": {
+      "language": "TypeScript",
+      "targets": [
+        "web"
+      ],
+      "format": "React Component",
+      "framework": "React"
+    },
+    "supersedes": [
+      "markdown-editor-synthesis"
+    ]
   }
 ]
