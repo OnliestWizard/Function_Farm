@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782041175219,
+  "generatedAt": 1782042590729,
   "nodes": [
     {
       "id": "camera-capture-ultimate",
@@ -123,19 +123,6 @@
       }
     },
     {
-      "id": "markdown-editor-synthesis",
-      "title": "Reusable Markdown Editor Component",
-      "category": "UI Components",
-      "profile": {
-        "language": "TypeScript",
-        "targets": [
-          "web"
-        ],
-        "format": "React Component",
-        "framework": "React"
-      }
-    },
-    {
       "id": "markdown-renderer",
       "title": "Markdown Renderer",
       "category": "Rendering",
@@ -160,6 +147,19 @@
         "uiDirectives": [
           "React Hooks"
         ]
+      }
+    },
+    {
+      "id": "markdown-editor-enhanced-v2",
+      "title": "Enhanced Markdown Editor Component V2",
+      "category": "UI Components",
+      "profile": {
+        "language": "TypeScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "framework": "React"
       }
     }
   ],
