@@ -231,5 +231,24 @@
       ],
       "framework": "React"
     }
+  },
+  {
+    "id": "image-editor-component",
+    "title": "Image Editor Component",
+    "category": "UI Components",
+    "targetPath": "syntheses/components/ImageEditorComponent.tsx",
+    "status": "approved",
+    "confidence": 0.9,
+    "digest": "73ae29dcf7b136794bf6b8951686722dbcd5098ec7b69008ba9c94ceab625fd6",
+    "profile": {
+      "language": "TypeScript",
+      "targets": [
+        "web"
+      ],
+      "format": "React Component",
+      "uiDirectives": [
+        "React Hooks"
+      ]
+    }
   }
 ]

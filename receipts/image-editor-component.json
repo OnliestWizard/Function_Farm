@@ -1,0 +1,80 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "mosch/react-avatar-editor",
+      "path": "packages/core/src/AvatarEditor.ts",
+      "lines": "0-477"
+    },
+    {
+      "repo": "mosch/react-avatar-editor",
+      "path": "packages/core/src/index.ts",
+      "lines": "0-10"
+    },
+    {
+      "repo": "mosch/react-avatar-editor",
+      "path": "packages/core/src/utils/loadImageURL.ts",
+      "lines": "0-21"
+    }
+  ],
+  "improvements": [
+    "Consolidation and abstraction of core image handling logic."
+  ],
+  "removals": [
+    "Excluded excess configuration for simplicity."
+  ],
+  "confidence": 0.9,
+  "lineage": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 37539,
+    "outputTokens": 1256,
+    "costUsd": 0.1064075
+  },
+  "inputs": [
+    {
+      "kind": "repo",
+      "ref": "mosch/react-avatar-editor",
+      "path": "packages/core/src/AvatarEditor.ts",
+      "lines": "0-477",
+      "contributed": "Primary class for image editing functionalities."
+    },
+    {
+      "kind": "repo",
+      "ref": "mosch/react-avatar-editor",
+      "path": "packages/core/src/utils/loadImageURL.ts",
+      "lines": "0-21",
+      "contributed": "Data URL loading utility."
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "image",
+        "type": "string",
+        "canonical": "ImageDataURL",
+        "verified": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "canvas",
+        "type": "HTMLCanvasElement",
+        "emits": "Rendered image from the Data URL as a canvas element.",
+        "verified": false
+      }
+    ],
+    "dependencies": []
+  },
+  "confidenceMatrix": [
+    {
+      "dimension": "code-quality",
+      "score": 0.9
+    },
+    {
+      "dimension": "error-handling",
+      "score": 0.7
+    }
+  ],
+  "digest": "73ae29dcf7b136794bf6b8951686722dbcd5098ec7b69008ba9c94ceab625fd6"
+}
