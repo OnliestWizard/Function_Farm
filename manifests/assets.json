@@ -162,5 +162,22 @@
     "relatesTo": [
       "camera-capture-ultimate-v2"
     ]
+  },
+  {
+    "id": "camera-photo-report-generator",
+    "title": "Camera Photo Report Generator",
+    "category": "Web Components",
+    "targetPath": "syntheses/web/cameraPhotoReportGenerator/index.js",
+    "status": "approved",
+    "confidence": 0.95,
+    "digest": "87f7b397ba767b6df0217878caf5c1e490a493af3d307f56ab275a49759c1d1c",
+    "profile": {
+      "language": "JavaScript",
+      "targets": [
+        "web"
+      ],
+      "format": "React Component",
+      "framework": "React"
+    }
   }
 ]

@@ -1,0 +1,64 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "camera-capture-repo",
+      "path": "src/UltimateCameraCapture.js",
+      "lines": "14-95"
+    },
+    {
+      "repo": "report-generator-repo",
+      "path": "src/InspectionReportGenerator.js",
+      "lines": "1-44"
+    }
+  ],
+  "improvements": [
+    "Merges photo capture and PDF report generation into one seamless process."
+  ],
+  "removals": [],
+  "confidence": 0.95,
+  "lineage": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 13015,
+    "outputTokens": 858,
+    "costUsd": 0.0411175
+  },
+  "inputs": [
+    {
+      "kind": "asset",
+      "ref": "camera-capture-ultimate-v2",
+      "path": "syntheses/web/cameraCapture/UltimateCameraCaptureComponentV2.js",
+      "lines": "10-110",
+      "contributed": "Provides the capability to capture photos from the camera."
+    },
+    {
+      "kind": "asset",
+      "ref": "inspection-report-generator-enhanced",
+      "path": "components/web/inspectionReportGeneratorEnhanced.js",
+      "lines": "10-50",
+      "contributed": "Generates a PDF based on the captured photo URL."
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "title",
+        "type": "string",
+        "verified": false
+      },
+      {
+        "name": "notes",
+        "type": "string",
+        "canonical": "MarkdownText",
+        "verified": false
+      }
+    ],
+    "outputs": [],
+    "dependencies": [
+      "react",
+      "jspdf"
+    ]
+  },
+  "digest": "87f7b397ba767b6df0217878caf5c1e490a493af3d307f56ab275a49759c1d1c"
+}
