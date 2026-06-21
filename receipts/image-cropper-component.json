@@ -1,0 +1,68 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "ValentinH/react-easy-crop",
+      "path": "src/Cropper.tsx",
+      "lines": "0-512"
+    }
+  ],
+  "improvements": [
+    "Simplified the API for easy reuse focused on image cropping using data URL inputs.",
+    "Enhanced code modularity and cleanness.",
+    "Integrated the component configuration for a broader usability scope."
+  ],
+  "removals": [],
+  "confidence": 0.95,
+  "lineage": [],
+  "usage": {
+    "provider": "openai",
+    "model": "gpt-4o",
+    "inputTokens": 19406,
+    "outputTokens": 1940,
+    "costUsd": 0.067915
+  },
+  "inputs": [
+    {
+      "kind": "repo",
+      "ref": "ValentinH/react-easy-crop",
+      "path": "src/Cropper.tsx",
+      "lines": "0-512",
+      "contributed": "Core functionalities for handling image crop."
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "image",
+        "type": "string",
+        "canonical": "ImageDataURL",
+        "verified": false
+      },
+      {
+        "name": "crop",
+        "type": "Point",
+        "verified": false
+      },
+      {
+        "name": "zoom",
+        "type": "number",
+        "verified": false
+      },
+      {
+        "name": "rotation",
+        "type": "number",
+        "verified": false
+      },
+      {
+        "name": "aspect",
+        "type": "number",
+        "verified": false
+      }
+    ],
+    "outputs": [],
+    "dependencies": [
+      "react"
+    ]
+  },
+  "digest": "903f91c645d7c425fc0fbc1b79989e6299a0f135a3616d9f557f3af763e6bbef"
+}
