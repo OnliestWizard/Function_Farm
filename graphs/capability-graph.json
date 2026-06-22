@@ -1,12 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782042590729,
+  "generatedAt": 1782145795974,
   "nodes": [
-    {
-      "id": "camera-capture-ultimate",
-      "title": "Ultimate Camera Capture Component",
-      "category": "Web Components"
-    },
     {
       "id": "voice-authentication-system",
       "title": "Voice-Based Authentication System",
@@ -67,21 +62,6 @@
       }
     },
     {
-      "id": "camera-capture-ultimate-v2",
-      "title": "Ultimate Camera Capture Component",
-      "category": "Web Components",
-      "profile": {
-        "language": "JavaScript",
-        "targets": [
-          "web"
-        ],
-        "format": "React Component",
-        "uiDirectives": [
-          "React Hooks"
-        ]
-      }
-    },
-    {
       "id": "inspection-report-generator-enhanced",
       "title": "Photo-Based Inspection Report Generator",
       "category": "Web Components",
@@ -123,6 +103,19 @@
       }
     },
     {
+      "id": "markdown-editor-synthesis",
+      "title": "Reusable Markdown Editor Component",
+      "category": "UI Components",
+      "profile": {
+        "language": "TypeScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "framework": "React"
+      }
+    },
+    {
       "id": "markdown-renderer",
       "title": "Markdown Renderer",
       "category": "Rendering",
@@ -150,133 +143,163 @@
       }
     },
     {
-      "id": "markdown-editor-enhanced-v2",
-      "title": "Enhanced Markdown Editor Component V2",
-      "category": "UI Components",
+      "id": "camera-capture-definitive",
+      "title": "Definitive Self-Contained Camera Capture Component",
+      "category": "Web Components",
       "profile": {
-        "language": "TypeScript",
+        "language": "JavaScript",
         "targets": [
           "web"
         ],
         "format": "React Component",
-        "framework": "React"
+        "framework": "React",
+        "uiDirectives": [
+          "React Hooks",
+          "Self-contained (no external deps)",
+          "Inline SVG icons",
+          "Inline styles"
+        ]
+      }
+    },
+    {
+      "id": "fuzzy-search-definitive",
+      "title": "Definitive Zero-Dependency Fuzzy Search",
+      "category": "Search / Ranking",
+      "profile": {
+        "language": "TypeScript",
+        "targets": [
+          "web",
+          "node"
+        ],
+        "format": "ES module",
+        "framework": "none"
       }
     }
   ],
   "edges": [
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "new-inspection-report-generator",
       "fromPort": "onCapture",
       "toPort": "photoUrl",
       "type": "string",
       "canonical": "ImageDataURL",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
-      "score": 0.875
+      "score": 0.95
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "inspection-report-generator-enhanced",
       "fromPort": "onCapture",
       "toPort": "photoUrl",
       "type": "string",
       "canonical": "ImageDataURL",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
-      "score": 0.875
+      "score": 0.95
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "image-cropper-component",
       "fromPort": "onCapture",
       "toPort": "image",
       "type": "string",
       "canonical": "ImageDataURL",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.85
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "image-editor-component",
       "fromPort": "onCapture",
       "toPort": "image",
       "type": "string",
       "canonical": "ImageDataURL",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.85
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "inspection-report-generator",
       "fromPort": "onCapture",
       "toPort": "title",
       "type": "string",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.4
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "inspection-report-generator",
       "fromPort": "onCapture",
       "toPort": "notes",
       "type": "string",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.4
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "new-inspection-report-generator",
       "fromPort": "onCapture",
       "toPort": "title",
       "type": "string",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.4
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "new-inspection-report-generator",
       "fromPort": "onCapture",
       "toPort": "notes",
       "type": "string",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.4
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "inspection-report-generator-enhanced",
       "fromPort": "onCapture",
       "toPort": "title",
       "type": "string",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.4
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "inspection-report-generator-enhanced",
       "fromPort": "onCapture",
       "toPort": "notes",
       "type": "string",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.4
     },
     {
-      "from": "camera-capture-ultimate-v2",
+      "from": "camera-capture-definitive",
       "to": "camera-photo-report-generator",
       "fromPort": "onCapture",
       "toPort": "title",
       "type": "string",
-      "emits": "image/jpeg dataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.4
+    },
+    {
+      "from": "camera-capture-definitive",
+      "to": "fuzzy-search-definitive",
+      "fromPort": "onCapture",
+      "toPort": "query",
+      "type": "string",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+      "verified": false,
+      "score": 0.3
     }
   ]
 }
