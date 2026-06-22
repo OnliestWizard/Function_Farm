@@ -1,0 +1,151 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "kentcdodds/match-sorter",
+      "path": "src/index.ts",
+      "lines": "57-340"
+    },
+    {
+      "repo": "farzher/fuzzysort",
+      "path": "fuzzysort.js",
+      "lines": "1-260"
+    },
+    {
+      "repo": "krisk/Fuse",
+      "path": "src/search/extended/parseQuery.ts",
+      "lines": "1-120"
+    },
+    {
+      "repo": "krisk/Fuse",
+      "path": "src/search/bitap/convertMaskToIndices.ts",
+      "lines": "1-32"
+    },
+    {
+      "repo": "krisk/Fuse",
+      "path": "src/search/bitap/search.ts",
+      "lines": "160-190"
+    }
+  ],
+  "improvements": [
+    "Unified one API surface (fuzzySearch) instead of three different option shapes (match-sorter keys, fuzzysort key/keys, Fuse weighted keys).",
+    "Replaced match-sorter's remove-accents dependency with a length-preserving inline diacritics fold so highlight indices stay aligned to the original string.",
+    "Carried fuzzysort's char-bitflag early-out into the tiered ranker so non-matching items are rejected before the expensive subsequence scan.",
+    "Emit highlight output as Fuse-style [start,end] tuples via mask collapsing for every tier (not just the fuzzy tier), so callers get one consistent highlight format."
+  ],
+  "removals": [
+    "Fuse's full bitap Levenshtein automaton (location/distance binary search) — heavy and not needed once a subsequence scorer covers the fuzzy tier.",
+    "fuzzysort's UMD wrapper, prepared-target caches and worker plumbing.",
+    "match-sorter's external remove-accents import.",
+    "Fuse's WebWorker, inverted-index and token-search subsystems."
+  ],
+  "confidence": 0.62,
+  "lineage": [
+    "match-sorter getMatchRanking tiers (v6) → kept as primary ordering",
+    "fuzzysort v3 algorithm subsequence+indexes → adapted as MATCHES-tier fine scorer",
+    "Fuse v7 extended parseQuery + convertMaskToIndices → operator parsing + range output",
+    "merged into single zero-dep TS module"
+  ],
+  "usage": {
+    "provider": "anthropic",
+    "model": "claude-opus-4-8",
+    "inputTokens": 68465,
+    "outputTokens": 13683,
+    "costUsd": 0.6844
+  },
+  "inputs": [
+    {
+      "kind": "repo",
+      "ref": "kentcdodds/match-sorter",
+      "path": "src/index.ts",
+      "lines": "57-340",
+      "contributed": "Deterministic ranking-tier ladder (CASE_SENSITIVE_EQUAL..MATCHES), acronym generation + position mapping, and the stable multi-key sort with keyIndex tie-break and localeCompare baseSort."
+    },
+    {
+      "kind": "repo",
+      "ref": "farzher/fuzzysort",
+      "path": "fuzzysort.js",
+      "lines": "1-260",
+      "contributed": "Subsequence fine-scorer with beginning-of-word/camelCase + contiguity bonuses for tie-breaking inside the MATCHES tier, the char-bitflag early-out for fast rejection, and the per-character match-index concept used for highlight ranges."
+    },
+    {
+      "kind": "repo",
+      "ref": "krisk/Fuse",
+      "path": "src/search/extended/parseQuery.ts",
+      "lines": "1-120",
+      "contributed": "Extended-query operator syntax parsed into AND clauses: =exact, 'include, ^prefix, suffix$, ^...$, and ! negation."
+    },
+    {
+      "kind": "repo",
+      "ref": "krisk/Fuse",
+      "path": "src/search/bitap/convertMaskToIndices.ts",
+      "lines": "1-32",
+      "contributed": "Collapsing scattered matched character positions into contiguous [start,end] highlight ranges (indicesToRanges)."
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "items",
+        "type": "ReadonlyArray<T>",
+        "default": "[]",
+        "verified": false
+      },
+      {
+        "name": "query",
+        "type": "string",
+        "default": "",
+        "verified": false
+      },
+      {
+        "name": "keys",
+        "type": "string[]",
+        "default": "undefined",
+        "verified": false
+      },
+      {
+        "name": "limit",
+        "type": "number",
+        "default": "undefined",
+        "verified": false
+      },
+      {
+        "name": "threshold",
+        "type": "number",
+        "default": "1 (MATCHES)",
+        "verified": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "return",
+        "type": "Array<FuzzyResult<T>>",
+        "emits": "ranked results: { item, refIndex, score, rank, key?, matches:[{key?,value,indices:[start,end][]}] }",
+        "verified": false
+      }
+    ],
+    "dependencies": []
+  },
+  "confidenceMatrix": [
+    {
+      "dimension": "ranking-tiers (match-sorter)",
+      "score": 0.85
+    },
+    {
+      "dimension": "highlight-ranges (fuse mask collapse)",
+      "score": 0.8
+    },
+    {
+      "dimension": "extended-query operators (fuse)",
+      "score": 0.75
+    },
+    {
+      "dimension": "subsequence fine-scoring (fuzzysort)",
+      "score": 0.55
+    },
+    {
+      "dimension": "score-number parity with originals",
+      "score": 0.3
+    }
+  ],
+  "digest": "7a3f2980ce3ee883a919083baaf3a97c740292971a9d959763850a544da1c17a"
+}

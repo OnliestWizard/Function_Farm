@@ -283,5 +283,23 @@
       "camera-photo-report-generator",
       "image-cropper-component"
     ]
+  },
+  {
+    "id": "fuzzy-search-definitive",
+    "title": "Definitive Zero-Dependency Fuzzy Search",
+    "category": "Search / Ranking",
+    "targetPath": "syntheses/search/fuzzySearch/index.ts",
+    "status": "approved",
+    "confidence": 0.62,
+    "digest": "7a3f2980ce3ee883a919083baaf3a97c740292971a9d959763850a544da1c17a",
+    "profile": {
+      "language": "TypeScript",
+      "targets": [
+        "web",
+        "node"
+      ],
+      "format": "ES module",
+      "framework": "none"
+    }
   }
 ]
