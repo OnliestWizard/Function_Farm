@@ -1,5 +1,12 @@
 [
   {
+    "version": "1782146793107_0691338d",
+    "digest": "0691338d5c05a0f25215e475e2fc3ee4387ee89c37eda2821b5e25ffb101addd",
+    "commitSha": "3b471e3c81451d4b873c9dbad1413a014bafeb03",
+    "timestamp": 1782146793107,
+    "note": "Tuned (AI): Removed the lucide-react Button import and replaced the <Button> element with a native <button>, preserving onClick and className. (+$0.0165 claude-opus-4-8)"
+  },
+  {
     "version": "1781959402452_bd30d102",
     "digest": "bd30d10246a6533008f68f7bd8a4feb9a202fb752348ac2728a6f620d7a54e2b",
     "commitSha": "8025401a75716888a0c7dbf1d9d91c6481e3f422",
