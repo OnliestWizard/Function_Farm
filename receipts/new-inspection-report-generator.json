@@ -22,7 +22,8 @@
   ],
   "confidence": 0.9,
   "lineage": [
-    "Influenced by prior usages of report and camera capabilities from SafetySnap"
+    "Influenced by prior usages of report and camera capabilities from SafetySnap",
+    "Tuned (AI): Removed the lucide-react Button import and replaced the <Button> element with a native <button>, preserving onClick and className. (+$0.0165 claude-opus-4-8)"
   ],
   "usage": {
     "provider": "openai",
@@ -74,5 +75,5 @@
       "jspdf"
     ]
   },
-  "digest": "bd30d10246a6533008f68f7bd8a4feb9a202fb752348ac2728a6f620d7a54e2b"
+  "digest": "0691338d5c05a0f25215e475e2fc3ee4387ee89c37eda2821b5e25ffb101addd"
 }

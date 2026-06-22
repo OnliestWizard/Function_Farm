@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { jsPDF } from "jspdf";
-import { Button } from 'lucide-react';
 
 // Inspection Report Generator
 function InspectionReportGenerator({ photoUrl, title, notes }) {
@@ -20,9 +19,9 @@ function InspectionReportGenerator({ photoUrl, title, notes }) {
       <h1>{title}</h1>
       <img src={photoUrl} alt="Captured" className="w-full h-auto object-cover" />
       <p>{notes}</p>
-      <Button onClick={generatePDF} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg">
+      <button onClick={generatePDF} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg">
         Export as PDF
-      </Button>
+      </button>
     </div>
   );
 }
