@@ -4,7 +4,7 @@
     "title": "Ultimate Camera Capture Component",
     "category": "Web Components",
     "targetPath": "syntheses/web/cameraCapture/UltimateCameraCaptureComponent.js",
-    "status": "approved",
+    "status": "superseded",
     "confidence": 0.95,
     "digest": "0cc8eaaed528b99b7488013c9319cc0c45d6506b970cd356ba7979ef274b4173"
   },
@@ -126,7 +126,7 @@
     "title": "Ultimate Camera Capture Component",
     "category": "Web Components",
     "targetPath": "syntheses/web/cameraCapture/UltimateCameraCaptureComponentV2.js",
-    "status": "approved",
+    "status": "superseded",
     "confidence": 0.95,
     "digest": "dea092bc053edc7a49fb3cf66d632b603d6e23573d3850340f5ef4ae03e80790",
     "profile": {
@@ -250,5 +250,38 @@
         "React Hooks"
       ]
     }
+  },
+  {
+    "id": "camera-capture-definitive",
+    "title": "Definitive Self-Contained Camera Capture Component",
+    "category": "Web Components",
+    "targetPath": "syntheses/web/cameraCapture/DefinitiveCameraCapture.jsx",
+    "status": "approved",
+    "confidence": 0.9,
+    "digest": "ed55be1d1719413c429acfe98a54043e76d39d43fea622d0c30c31ce54b28506",
+    "profile": {
+      "language": "JavaScript",
+      "targets": [
+        "web"
+      ],
+      "format": "React Component",
+      "framework": "React",
+      "uiDirectives": [
+        "React Hooks",
+        "Self-contained (no external deps)",
+        "Inline SVG icons",
+        "Inline styles"
+      ]
+    },
+    "supersedes": [
+      "camera-capture-ultimate-v2",
+      "camera-capture-ultimate",
+      "camera-capture-enhanced"
+    ],
+    "relatesTo": [
+      "inspection-report-generator-enhanced",
+      "camera-photo-report-generator",
+      "image-cropper-component"
+    ]
   }
 ]

@@ -1,0 +1,138 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "OnliestWizard/SafetySnap",
+      "path": "app/components/CameraCapture.js",
+      "lines": "1-145"
+    }
+  ],
+  "improvements": [
+    "Removed lucide-react dependency — inline SVG icons make it self-contained",
+    "Removed Tailwind dependency — inline styles so it works with zero CSS setup",
+    "Wired up the camera-flip control that SafetySnap imported (RotateCcw) but never used",
+    "Added retake/preview step before committing the capture",
+    "Added imageType and quality props (default image/jpeg @ 0.8)",
+    "Kept v1's resilience: auto-invoke onSkip when the camera fails to start",
+    "Stops all media tracks on unmount, capture, skip, and flip to free the camera"
+  ],
+  "removals": [
+    "lucide-react import",
+    "Tailwind utility classes",
+    "Unused/undefined handleSkip reference in the v1 error branch"
+  ],
+  "confidence": 0.9,
+  "lineage": [
+    "SafetySnap/app/components/CameraCapture.js (canonical source)",
+    "camera-capture-enhanced (superseded)",
+    "camera-capture-ultimate (added auto-skip on failure)",
+    "camera-capture-ultimate-v2 (cleaned API/defaults)",
+    "camera-capture-definitive (self-contained, flip + retake, this asset)"
+  ],
+  "usage": {
+    "provider": "anthropic",
+    "model": "claude-opus-4-8",
+    "inputTokens": 64110,
+    "outputTokens": 7733,
+    "costUsd": 0.513875
+  },
+  "inputs": [
+    {
+      "kind": "repo",
+      "ref": "OnliestWizard/SafetySnap",
+      "path": "app/components/CameraCapture.js",
+      "lines": "1-145",
+      "contributed": "Canonical getUserMedia + canvas toDataURL capture pipeline, clean handleSkip helper, and the unused RotateCcw flip import this asset finally wires up."
+    },
+    {
+      "kind": "asset",
+      "ref": "camera-capture-ultimate",
+      "path": "syntheses/web/cameraCapture/UltimateCameraCaptureComponent.js",
+      "lines": "38-51",
+      "contributed": "Resilience pattern: auto-invoke onSkip when the camera fails to start."
+    },
+    {
+      "kind": "asset",
+      "ref": "camera-capture-ultimate-v2",
+      "path": "syntheses/web/cameraCapture/UltimateCameraCaptureComponentV2.js",
+      "lines": "30-46",
+      "contributed": "Cleaned-up prop API and default values (title, allowSkip, facingMode)."
+    }
+  ],
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "title",
+        "type": "string",
+        "default": "Take Photo",
+        "verified": true
+      },
+      {
+        "name": "allowSkip",
+        "type": "boolean",
+        "default": true,
+        "verified": true
+      },
+      {
+        "name": "allowFlip",
+        "type": "boolean",
+        "default": true,
+        "verified": true
+      },
+      {
+        "name": "facingMode",
+        "type": "string",
+        "default": "environment",
+        "verified": true
+      },
+      {
+        "name": "imageType",
+        "type": "string",
+        "default": "image/jpeg",
+        "verified": true,
+        "canonical": "ImageDataURL"
+      },
+      {
+        "name": "quality",
+        "type": "number",
+        "default": 0.8,
+        "verified": true
+      }
+    ],
+    "outputs": [
+      {
+        "name": "onCapture",
+        "type": "string",
+        "verified": true,
+        "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+        "canonical": "ImageDataURL"
+      },
+      {
+        "name": "onSkip",
+        "type": "void",
+        "verified": true
+      }
+    ],
+    "dependencies": [
+      "react"
+    ]
+  },
+  "confidenceMatrix": [
+    {
+      "dimension": "completeness",
+      "score": 0.92
+    },
+    {
+      "dimension": "sourceFidelity",
+      "score": 0.95
+    },
+    {
+      "dimension": "composability",
+      "score": 0.9
+    },
+    {
+      "dimension": "selfContainment",
+      "score": 0.95
+    }
+  ],
+  "digest": "ed55be1d1719413c429acfe98a54043e76d39d43fea622d0c30c31ce54b28506"
+}
