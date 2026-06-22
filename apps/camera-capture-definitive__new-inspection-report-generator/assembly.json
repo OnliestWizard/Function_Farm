@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": 1782145820133,
+  "id": "camera-capture-definitive__new-inspection-report-generator",
+  "appComponent": "AssembledApp",
+  "chain": "Definitive Self-Contained Camera Capture Component → Inspection Report Generator Component",
+  "nodeIds": [
+    "camera-capture-definitive",
+    "new-inspection-report-generator"
+  ],
+  "score": 0.95,
+  "wiredCount": 1,
+  "stubCount": 0,
+  "steps": [
+    {
+      "from": "camera-capture-definitive",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onCapture",
+      "toPort": "photoUrl",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 0.95,
+      "callbackWired": true
+    }
+  ]
+}
