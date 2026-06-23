@@ -1,0 +1,94 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "ValentinH/react-easy-crop",
+      "path": "README.md",
+      "lines": "60-95",
+      "license": "MIT"
+    },
+    {
+      "repo": "ValentinH/react-easy-crop",
+      "path": "LICENSE",
+      "lines": "1-21",
+      "license": "MIT"
+    }
+  ],
+  "improvements": [
+    "Replaced the broken hand-rolled cropper (undefined minZoom/maxZoom/Size, no clipping, no output) with the real react-easy-crop Cropper",
+    "Added a required onCropped(croppedDataUrl) output so the cropped result actually leaves the component",
+    "Inline getCroppedImg canvas helper using canvas.toDataURL — no extra deps",
+    "Tracks croppedAreaPixels in a ref via onCropComplete so the Crop button always uses the latest crop"
+  ],
+  "removals": [
+    "Imports of nonexistent ./types, ./helpers, ./styles.css?raw",
+    "Undefined minZoom/maxZoom references and the non-functional crop-area overlay div"
+  ],
+  "confidence": 0.9,
+  "lineage": [
+    "image-cropper-component (hand-rolled, broken) -> image-cropper-component-v2 (react-easy-crop, emits ImageDataURL)"
+  ],
+  "usage": {
+    "provider": "anthropic",
+    "model": "claude-opus-4-8",
+    "inputTokens": 27316,
+    "outputTokens": 3927,
+    "costUsd": 0.234755
+  },
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "image",
+        "type": "string",
+        "verified": true,
+        "canonical": "ImageDataURL"
+      },
+      {
+        "name": "aspect",
+        "type": "number",
+        "verified": true,
+        "default": "4 / 3"
+      },
+      {
+        "name": "cropShape",
+        "type": "string",
+        "default": "rect",
+        "verified": true
+      },
+      {
+        "name": "outputType",
+        "type": "string",
+        "default": "image/jpeg",
+        "verified": true
+      }
+    ],
+    "outputs": [
+      {
+        "name": "onCropped",
+        "type": "string",
+        "verified": true,
+        "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
+        "canonical": "ImageDataURL"
+      }
+    ],
+    "dependencies": [
+      "react",
+      "react-easy-crop"
+    ]
+  },
+  "confidenceMatrix": [
+    {
+      "dimension": "apiAccuracy",
+      "score": 0.95
+    },
+    {
+      "dimension": "completeness",
+      "score": 0.9
+    },
+    {
+      "dimension": "licenseVerified",
+      "score": 1
+    }
+  ],
+  "effectiveLicense": "MIT",
+  "digest": "dd1dba5ee3024ed2aa5225aa3c70a76961c008391adeaf42761728a212d0e396"
+}
