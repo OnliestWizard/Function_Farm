@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": 1782210360453,
+  "id": "image-dropzone-upload__image-editor-component",
+  "appComponent": "AssembledApp",
+  "chain": "React Image Dropzone → onUpload(ImageDataURL) → Definitive Self-Contained Camera Capture Component → Image Cropper Component (react-easy-crop) → Image Editor Component",
+  "nodeIds": [
+    "image-dropzone-upload",
+    "camera-capture-definitive",
+    "image-cropper-component-v2",
+    "image-editor-component"
+  ],
+  "score": 0.983,
+  "wiredCount": 3,
+  "stubCount": 0,
+  "steps": [
+    {
+      "from": "image-dropzone-upload",
+      "to": "camera-capture-definitive",
+      "fromPort": "onUpload",
+      "toPort": "imageType",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 1,
+      "callbackWired": true
+    },
+    {
+      "from": "camera-capture-definitive",
+      "to": "image-cropper-component-v2",
+      "fromPort": "onCapture",
+      "toPort": "image",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 1,
+      "callbackWired": true
+    },
+    {
+      "from": "image-cropper-component-v2",
+      "to": "image-editor-component",
+      "fromPort": "onCropped",
+      "toPort": "image",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 0.95,
+      "callbackWired": true
+    }
+  ]
+}
