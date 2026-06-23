@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782205380668,
+  "generatedAt": 1782205397115,
   "id": "image-dropzone-upload__new-inspection-report-generator",
   "appComponent": "AssembledApp",
   "chain": "React Image Dropzone → onUpload(ImageDataURL) → Definitive Self-Contained Camera Capture Component → Inspection Report Generator Component",
