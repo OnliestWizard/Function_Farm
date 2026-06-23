@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782145795974,
+  "generatedAt": 1782204153942,
   "nodes": [
     {
       "id": "voice-authentication-system",
@@ -174,9 +174,36 @@
         "format": "ES module",
         "framework": "none"
       }
+    },
+    {
+      "id": "image-dropzone-upload",
+      "title": "React Image Dropzone → onUpload(ImageDataURL)",
+      "category": "ui/image-upload",
+      "profile": {
+        "language": "JavaScript",
+        "targets": [
+          "web"
+        ],
+        "format": "jsx",
+        "framework": "React",
+        "uiDirectives": [
+          "component"
+        ]
+      }
     }
   ],
   "edges": [
+    {
+      "from": "image-dropzone-upload",
+      "to": "camera-capture-definitive",
+      "fromPort": "onUpload",
+      "toPort": "imageType",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": true,
+      "score": 1
+    },
     {
       "from": "camera-capture-definitive",
       "to": "new-inspection-report-generator",
@@ -220,6 +247,70 @@
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
       "score": 0.85
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "image-cropper-component",
+      "fromPort": "onUpload",
+      "toPort": "image",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.85
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "image-editor-component",
+      "fromPort": "onUpload",
+      "toPort": "image",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.85
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onUpload",
+      "toPort": "photoUrl",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.775
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onUpload",
+      "toPort": "photoUrl",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.775
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "camera-capture-definitive",
+      "fromPort": "onUpload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": true,
+      "score": 0.55
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "camera-capture-definitive",
+      "fromPort": "onUpload",
+      "toPort": "facingMode",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": true,
+      "score": 0.55
     },
     {
       "from": "camera-capture-definitive",
@@ -298,6 +389,96 @@
       "toPort": "query",
       "type": "string",
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "camera-capture-definitive",
+      "to": "image-dropzone-upload",
+      "fromPort": "onCapture",
+      "toPort": "className",
+      "type": "string",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "inspection-report-generator",
+      "fromPort": "onUpload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "inspection-report-generator",
+      "fromPort": "onUpload",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onUpload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onUpload",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onUpload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onUpload",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "camera-photo-report-generator",
+      "fromPort": "onUpload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "image-dropzone-upload",
+      "to": "fuzzy-search-definitive",
+      "fromPort": "onUpload",
+      "toPort": "query",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
       "verified": false,
       "score": 0.3
     }
