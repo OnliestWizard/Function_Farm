@@ -301,5 +301,25 @@
       "format": "ES module",
       "framework": "none"
     }
+  },
+  {
+    "id": "image-dropzone-upload",
+    "title": "React Image Dropzone → onUpload(ImageDataURL)",
+    "category": "ui/image-upload",
+    "targetPath": "capabilities/ui/image-dropzone-upload/index.jsx",
+    "status": "approved",
+    "confidence": 0.78,
+    "digest": "bb8ccc47437ee8349e6faea84c13b3a0ef1e3b569b5f30518bc6a64de9e2eb1b",
+    "profile": {
+      "language": "JavaScript",
+      "targets": [
+        "web"
+      ],
+      "format": "jsx",
+      "framework": "React",
+      "uiDirectives": [
+        "component"
+      ]
+    }
   }
 ]

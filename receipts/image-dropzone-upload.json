@@ -1,0 +1,99 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "react-dropzone/react-dropzone",
+      "path": "examples/accept/README.md",
+      "lines": "1-72",
+      "license": "MIT"
+    },
+    {
+      "repo": "react-dropzone/react-dropzone",
+      "path": "examples/previews/README.md",
+      "lines": "45-72",
+      "license": "MIT"
+    },
+    {
+      "repo": "react-dropzone/react-dropzone",
+      "path": "LICENSE",
+      "lines": "1-21",
+      "license": "MIT"
+    }
+  ],
+  "improvements": [
+    "Added a required onUpload(dataUrl) OUTPUT seam using FileReader.readAsDataURL so the component emits an ImageDataURL instead of only exposing acceptedFiles",
+    "Restricted accept to image/* so only images are processed",
+    "Surfaced isDragActive/isDragReject and fileRejections for UX feedback",
+    "FileReader error handling via onError callback prop"
+  ],
+  "removals": [
+    "Dropped the preview/URL.createObjectURL thumbnail rendering from the previews example (not needed for a data-URL upload seam)",
+    "Removed multi-file list rendering — focuses on a single emitted image data URL"
+  ],
+  "confidence": 0.78,
+  "lineage": [
+    "react-dropzone useDropzone (examples/accept, examples/previews) -> add FileReader.readAsDataURL bridge -> emit onUpload(ImageDataURL)"
+  ],
+  "usage": {
+    "provider": "anthropic",
+    "model": "claude-opus-4-8",
+    "inputTokens": 19525,
+    "outputTokens": 3550,
+    "costUsd": 0.186375
+  },
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "accept",
+        "type": "object",
+        "verified": true,
+        "default": "{ 'image/*': [] }"
+      },
+      {
+        "name": "multiple",
+        "type": "boolean",
+        "default": false,
+        "verified": false
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "default": "'dropzone'",
+        "verified": false
+      }
+    ],
+    "outputs": [
+      {
+        "name": "onUpload",
+        "type": "string",
+        "verified": true,
+        "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+        "canonical": "ImageDataURL"
+      },
+      {
+        "name": "onError",
+        "type": "unknown",
+        "verified": true
+      }
+    ],
+    "dependencies": [
+      "react",
+      "react-dropzone"
+    ]
+  },
+  "confidenceMatrix": [
+    {
+      "dimension": "dropzone-api-fidelity",
+      "score": 0.9
+    },
+    {
+      "dimension": "filereader-output-seam",
+      "score": 0.8
+    },
+    {
+      "dimension": "completeness",
+      "score": 0.75
+    }
+  ],
+  "effectiveLicense": "MIT",
+  "digest": "bb8ccc47437ee8349e6faea84c13b3a0ef1e3b569b5f30518bc6a64de9e2eb1b"
+}
