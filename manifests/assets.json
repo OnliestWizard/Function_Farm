@@ -349,5 +349,31 @@
       "camera-capture-definitive",
       "image-dropzone-upload"
     ]
+  },
+  {
+    "id": "photo-download-app",
+    "title": "Photo Download Utility App (saves ImageDataURL to device)",
+    "category": "Web Components",
+    "targetPath": "capabilities/web/photoDownloadApp/index.jsx",
+    "status": "approved",
+    "confidence": 0.7,
+    "digest": "df665b560194d80c81aa05d557295c3925c457f3aebfe338a9965ca43a4d3208",
+    "profile": {
+      "language": "JavaScript",
+      "targets": [
+        "web"
+      ],
+      "format": "React Component",
+      "framework": "React",
+      "uiDirectives": [
+        "React Hooks",
+        "Self-contained (no external deps)",
+        "Inline styles",
+        "Blob/object-URL download"
+      ]
+    },
+    "relatesTo": [
+      "camera-capture-definitive"
+    ]
   }
 ]
