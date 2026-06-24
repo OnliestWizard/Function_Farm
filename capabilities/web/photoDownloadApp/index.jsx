@@ -98,13 +98,20 @@ export function PhotoDownloader({ photo, filename = 'photo', onDownload, onRetak
  * PhotoDownloaderApp — the whole small utility: capture a photo, then save it.
  * Drop <DefinitiveCameraCapture> (from the camera-capture-definitive asset) in
  * where indicated; it emits an ImageDataURL we feed straight to PhotoDownloader.
+ *
+ * @param {string} [filename='photo'] - base filename for the download.
+ * @param {string} [photo] - optional ImageDataURL provided by a parent. When
+ *   present, it is used directly and the standalone file picker is skipped.
  */
-export default function PhotoDownloaderApp({ filename = 'photo' }) {
-  const [photo, setPhoto] = useState(null);
+export default function PhotoDownloaderApp({ filename = 'photo', photo: photoProp }) {
+  const [pickedPhoto, setPickedPhoto] = useState(null);
+
+  // Prefer a photo handed in by a parent; otherwise use the locally picked one.
+  const photo = photoProp ?? pickedPhoto;
 
   if (!photo) {
     // Uncomment once DefinitiveCameraCapture is imported:
-    // return <DefinitiveCameraCapture onCapture={setPhoto} onSkip={() => {}} />;
+    // return <DefinitiveCameraCapture onCapture={setPickedPhoto} onSkip={() => {}} />;
     return (
       <label style={{ display: 'inline-block', padding: 16, cursor: 'pointer' }}>
         Choose / capture a photo
@@ -117,7 +124,7 @@ export default function PhotoDownloaderApp({ filename = 'photo' }) {
             const file = e.target.files?.[0];
             if (!file) return;
             const reader = new FileReader();
-            reader.onload = () => setPhoto(reader.result); // ImageDataURL
+            reader.onload = () => setPickedPhoto(reader.result); // ImageDataURL
             reader.readAsDataURL(file);
           }}
         />
@@ -129,7 +136,7 @@ export default function PhotoDownloaderApp({ filename = 'photo' }) {
     <PhotoDownloader
       photo={photo}
       filename={filename}
-      onRetake={() => setPhoto(null)}
+      onRetake={photoProp ? undefined : () => setPickedPhoto(null)}
       onDownload={(name) => console.log('Saved', name)}
     />
   );

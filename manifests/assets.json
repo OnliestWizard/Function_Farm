@@ -357,7 +357,7 @@
     "targetPath": "capabilities/web/photoDownloadApp/index.jsx",
     "status": "approved",
     "confidence": 0.7,
-    "digest": "df665b560194d80c81aa05d557295c3925c457f3aebfe338a9965ca43a4d3208",
+    "digest": "bb4dc65cb7ea3421fbfa4f8693934608713f9de1f0bd850c5670fd2e7ebfc2e5",
     "profile": {
       "language": "JavaScript",
       "targets": [
