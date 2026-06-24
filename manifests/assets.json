@@ -327,7 +327,7 @@
     "title": "Image Cropper Component (react-easy-crop)",
     "category": "UI Components",
     "targetPath": "syntheses/components/ImageCropper.tsx",
-    "status": "approved",
+    "status": "archived",
     "confidence": 0.9,
     "digest": "dd1dba5ee3024ed2aa5225aa3c70a76961c008391adeaf42761728a212d0e396",
     "profile": {
