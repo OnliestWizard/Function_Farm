@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": 1782302349413,
+  "id": "camera-capture-definitive__photo-download-app",
+  "appComponent": "AssembledApp",
+  "chain": "Definitive Self-Contained Camera Capture Component → Photo Download Utility App (saves ImageDataURL to device)",
+  "nodeIds": [
+    "camera-capture-definitive",
+    "photo-download-app"
+  ],
+  "score": 1,
+  "wiredCount": 1,
+  "stubCount": 0,
+  "steps": [
+    {
+      "from": "camera-capture-definitive",
+      "to": "photo-download-app",
+      "fromPort": "onCapture",
+      "toPort": "photo",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 1,
+      "callbackWired": true
+    }
+  ]
+}
