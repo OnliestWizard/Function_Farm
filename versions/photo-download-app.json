@@ -1,5 +1,12 @@
 [
   {
+    "version": "1782319684845_bb4dc65c",
+    "digest": "bb4dc65cb7ea3421fbfa4f8693934608713f9de1f0bd850c5670fd2e7ebfc2e5",
+    "commitSha": "67417b500651bf9d9738a3d7eeb8690c43f6d4e8",
+    "timestamp": 1782319684845,
+    "note": "Tuned (AI): Added optional `photo` prop to PhotoDownloaderApp; uses it as the photo when provided, otherwise falls back to the file-picker behavior. (+$0.0783 claude-opus-4-8)"
+  },
+  {
     "version": "1782299528668_df665b56",
     "digest": "df665b560194d80c81aa05d557295c3925c457f3aebfe338a9965ca43a4d3208",
     "commitSha": "80509a60a3a25f61dc6be760815f50c2227c70ee",
