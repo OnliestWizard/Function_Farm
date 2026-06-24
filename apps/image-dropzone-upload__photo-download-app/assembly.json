@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": 1782300023685,
+  "id": "image-dropzone-upload__photo-download-app",
+  "appComponent": "AssembledApp",
+  "chain": "React Image Dropzone → onUpload(ImageDataURL) → Definitive Self-Contained Camera Capture Component → Photo Download Utility App (saves ImageDataURL to device)",
+  "nodeIds": [
+    "image-dropzone-upload",
+    "camera-capture-definitive",
+    "photo-download-app"
+  ],
+  "score": 1,
+  "wiredCount": 2,
+  "stubCount": 0,
+  "steps": [
+    {
+      "from": "image-dropzone-upload",
+      "to": "camera-capture-definitive",
+      "fromPort": "onUpload",
+      "toPort": "imageType",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 1,
+      "callbackWired": true
+    },
+    {
+      "from": "camera-capture-definitive",
+      "to": "photo-download-app",
+      "fromPort": "onCapture",
+      "toPort": "photo",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 1,
+      "callbackWired": true
+    }
+  ]
+}
