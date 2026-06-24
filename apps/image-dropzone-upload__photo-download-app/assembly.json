@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782300676957,
+  "generatedAt": 1782301051598,
   "id": "image-dropzone-upload__photo-download-app",
   "appComponent": "AssembledApp",
   "chain": "React Image Dropzone → onUpload(ImageDataURL) → Photo Download Utility App (saves ImageDataURL to device)",
