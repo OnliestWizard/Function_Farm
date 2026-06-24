@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": 1782302148971,
+  "id": "image-cropper-component-v2__inspection-report-generator-enhanced",
+  "appComponent": "AssembledApp",
+  "chain": "Image Cropper Component (react-easy-crop) → Definitive Self-Contained Camera Capture Component → Photo-Based Inspection Report Generator",
+  "nodeIds": [
+    "image-cropper-component-v2",
+    "camera-capture-definitive",
+    "inspection-report-generator-enhanced"
+  ],
+  "score": 0.975,
+  "wiredCount": 2,
+  "stubCount": 0,
+  "steps": [
+    {
+      "from": "image-cropper-component-v2",
+      "to": "camera-capture-definitive",
+      "fromPort": "onCropped",
+      "toPort": "imageType",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 1,
+      "callbackWired": true
+    },
+    {
+      "from": "camera-capture-definitive",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onCapture",
+      "toPort": "photoUrl",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 0.95,
+      "callbackWired": true
+    }
+  ]
+}
