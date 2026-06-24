@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782301367545,
+  "generatedAt": 1782302301817,
   "nodes": [
     {
       "id": "voice-authentication-system",
@@ -161,23 +161,6 @@
       }
     },
     {
-      "id": "image-cropper-component-v2",
-      "title": "Image Cropper Component (react-easy-crop)",
-      "category": "UI Components",
-      "profile": {
-        "language": "TypeScript",
-        "targets": [
-          "web"
-        ],
-        "format": "React Component",
-        "framework": "React",
-        "uiDirectives": [
-          "React Hooks",
-          "react-easy-crop"
-        ]
-      }
-    },
-    {
       "id": "photo-download-app",
       "title": "Photo Download Utility App (saves ImageDataURL to device)",
       "category": "Web Components",
@@ -200,34 +183,12 @@
   "edges": [
     {
       "from": "camera-capture-definitive",
-      "to": "image-cropper-component-v2",
-      "fromPort": "onCapture",
-      "toPort": "image",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
-      "verified": true,
-      "score": 1
-    },
-    {
-      "from": "camera-capture-definitive",
       "to": "photo-download-app",
       "fromPort": "onCapture",
       "toPort": "photo",
       "type": "string",
       "canonical": "ImageDataURL",
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
-      "verified": true,
-      "score": 1
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "camera-capture-definitive",
-      "fromPort": "onCropped",
-      "toPort": "imageType",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
       "verified": true,
       "score": 1
     },
@@ -251,28 +212,6 @@
       "canonical": "ImageDataURL",
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
-      "score": 0.95
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "image-editor-component",
-      "fromPort": "onCropped",
-      "toPort": "image",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.95
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "photo-download-app",
-      "fromPort": "onCropped",
-      "toPort": "photo",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": true,
       "score": 0.95
     },
     {
@@ -307,48 +246,6 @@
       "score": 0.8
     },
     {
-      "from": "image-cropper-component-v2",
-      "to": "new-inspection-report-generator",
-      "fromPort": "onCropped",
-      "toPort": "photoUrl",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.775
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "inspection-report-generator-enhanced",
-      "fromPort": "onCropped",
-      "toPort": "photoUrl",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.775
-    },
-    {
-      "from": "photo-download-app",
-      "to": "image-cropper-component-v2",
-      "fromPort": "onDownload",
-      "toPort": "cropShape",
-      "type": "string",
-      "emits": "final saved filename (e.g. photo.jpg)",
-      "verified": true,
-      "score": 0.7
-    },
-    {
-      "from": "photo-download-app",
-      "to": "image-cropper-component-v2",
-      "fromPort": "onDownload",
-      "toPort": "outputType",
-      "type": "string",
-      "emits": "final saved filename (e.g. photo.jpg)",
-      "verified": true,
-      "score": 0.7
-    },
-    {
       "from": "camera-capture-definitive",
       "to": "photo-download-app",
       "fromPort": "onCapture",
@@ -367,56 +264,6 @@
       "emits": "final saved filename (e.g. photo.jpg)",
       "verified": true,
       "score": 0.65
-    },
-    {
-      "from": "camera-capture-definitive",
-      "to": "image-cropper-component-v2",
-      "fromPort": "onCapture",
-      "toPort": "cropShape",
-      "type": "string",
-      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "camera-capture-definitive",
-      "to": "image-cropper-component-v2",
-      "fromPort": "onCapture",
-      "toPort": "outputType",
-      "type": "string",
-      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "camera-capture-definitive",
-      "fromPort": "onCropped",
-      "toPort": "title",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "camera-capture-definitive",
-      "fromPort": "onCropped",
-      "toPort": "facingMode",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "photo-download-app",
-      "fromPort": "onCropped",
-      "toPort": "filename",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": true,
-      "score": 0.55
     },
     {
       "from": "photo-download-app",
@@ -493,16 +340,6 @@
       "to": "markdown-renderer",
       "fromPort": "onDownload",
       "toPort": "markdown",
-      "type": "string",
-      "emits": "final saved filename (e.g. photo.jpg)",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "photo-download-app",
-      "to": "image-cropper-component-v2",
-      "fromPort": "onDownload",
-      "toPort": "image",
       "type": "string",
       "emits": "final saved filename (e.g. photo.jpg)",
       "verified": true,
@@ -625,86 +462,6 @@
       "toPort": "query",
       "type": "string",
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "inspection-report-generator",
-      "fromPort": "onCropped",
-      "toPort": "title",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "inspection-report-generator",
-      "fromPort": "onCropped",
-      "toPort": "notes",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "new-inspection-report-generator",
-      "fromPort": "onCropped",
-      "toPort": "title",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "new-inspection-report-generator",
-      "fromPort": "onCropped",
-      "toPort": "notes",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "inspection-report-generator-enhanced",
-      "fromPort": "onCropped",
-      "toPort": "title",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "inspection-report-generator-enhanced",
-      "fromPort": "onCropped",
-      "toPort": "notes",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "camera-photo-report-generator",
-      "fromPort": "onCropped",
-      "toPort": "title",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "fuzzy-search-definitive",
-      "fromPort": "onCropped",
-      "toPort": "query",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
       "verified": false,
       "score": 0.3
     },
