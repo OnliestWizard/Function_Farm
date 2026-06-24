@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782302360867,
+  "generatedAt": 1782319751731,
   "id": "camera-capture-definitive__photo-download-app",
   "appComponent": "AssembledApp",
   "chain": "Definitive Self-Contained Camera Capture Component → Photo Download Utility App (saves ImageDataURL to device)",
