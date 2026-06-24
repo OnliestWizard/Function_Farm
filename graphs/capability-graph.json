@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782300603544,
+  "generatedAt": 1782301172718,
   "nodes": [
     {
       "id": "voice-authentication-system",
@@ -161,22 +161,6 @@
       }
     },
     {
-      "id": "image-dropzone-upload",
-      "title": "React Image Dropzone → onUpload(ImageDataURL)",
-      "category": "ui/image-upload",
-      "profile": {
-        "language": "JavaScript",
-        "targets": [
-          "web"
-        ],
-        "format": "jsx",
-        "framework": "React",
-        "uiDirectives": [
-          "component"
-        ]
-      }
-    },
-    {
       "id": "image-cropper-component-v2",
       "title": "Image Cropper Component (react-easy-crop)",
       "category": "UI Components",
@@ -237,28 +221,6 @@
       "score": 1
     },
     {
-      "from": "image-dropzone-upload",
-      "to": "camera-capture-definitive",
-      "fromPort": "onUpload",
-      "toPort": "imageType",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": true,
-      "score": 1
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "image-cropper-component-v2",
-      "fromPort": "onUpload",
-      "toPort": "image",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": true,
-      "score": 1
-    },
-    {
       "from": "image-cropper-component-v2",
       "to": "camera-capture-definitive",
       "fromPort": "onCropped",
@@ -292,17 +254,6 @@
       "score": 0.95
     },
     {
-      "from": "image-dropzone-upload",
-      "to": "photo-download-app",
-      "fromPort": "onUpload",
-      "toPort": "photo",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": true,
-      "score": 0.95
-    },
-    {
       "from": "image-cropper-component-v2",
       "to": "image-editor-component",
       "fromPort": "onCropped",
@@ -332,17 +283,6 @@
       "type": "string",
       "canonical": "ImageDataURL",
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
-      "verified": false,
-      "score": 0.85
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "image-editor-component",
-      "fromPort": "onUpload",
-      "toPort": "image",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
       "verified": false,
       "score": 0.85
     },
@@ -365,28 +305,6 @@
       "emits": "final saved filename (e.g. photo.jpg)",
       "verified": true,
       "score": 0.8
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "new-inspection-report-generator",
-      "fromPort": "onUpload",
-      "toPort": "photoUrl",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.775
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "inspection-report-generator-enhanced",
-      "fromPort": "onUpload",
-      "toPort": "photoUrl",
-      "type": "string",
-      "canonical": "ImageDataURL",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.775
     },
     {
       "from": "image-cropper-component-v2",
@@ -467,56 +385,6 @@
       "toPort": "outputType",
       "type": "string",
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "camera-capture-definitive",
-      "fromPort": "onUpload",
-      "toPort": "title",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "camera-capture-definitive",
-      "fromPort": "onUpload",
-      "toPort": "facingMode",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "image-cropper-component-v2",
-      "fromPort": "onUpload",
-      "toPort": "cropShape",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "image-cropper-component-v2",
-      "fromPort": "onUpload",
-      "toPort": "outputType",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": true,
-      "score": 0.55
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "photo-download-app",
-      "fromPort": "onUpload",
-      "toPort": "filename",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
       "verified": true,
       "score": 0.55
     },
@@ -671,16 +539,6 @@
       "score": 0.45
     },
     {
-      "from": "photo-download-app",
-      "to": "image-dropzone-upload",
-      "fromPort": "onDownload",
-      "toPort": "className",
-      "type": "string",
-      "emits": "final saved filename (e.g. photo.jpg)",
-      "verified": false,
-      "score": 0.45
-    },
-    {
       "from": "camera-capture-definitive",
       "to": "inspection-report-generator",
       "fromPort": "onCapture",
@@ -771,96 +629,6 @@
       "score": 0.3
     },
     {
-      "from": "camera-capture-definitive",
-      "to": "image-dropzone-upload",
-      "fromPort": "onCapture",
-      "toPort": "className",
-      "type": "string",
-      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "inspection-report-generator",
-      "fromPort": "onUpload",
-      "toPort": "title",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "inspection-report-generator",
-      "fromPort": "onUpload",
-      "toPort": "notes",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "new-inspection-report-generator",
-      "fromPort": "onUpload",
-      "toPort": "title",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "new-inspection-report-generator",
-      "fromPort": "onUpload",
-      "toPort": "notes",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "inspection-report-generator-enhanced",
-      "fromPort": "onUpload",
-      "toPort": "title",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "inspection-report-generator-enhanced",
-      "fromPort": "onUpload",
-      "toPort": "notes",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "camera-photo-report-generator",
-      "fromPort": "onUpload",
-      "toPort": "title",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-dropzone-upload",
-      "to": "fuzzy-search-definitive",
-      "fromPort": "onUpload",
-      "toPort": "query",
-      "type": "string",
-      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
       "from": "image-cropper-component-v2",
       "to": "inspection-report-generator",
       "fromPort": "onCropped",
@@ -935,16 +703,6 @@
       "to": "fuzzy-search-definitive",
       "fromPort": "onCropped",
       "toPort": "query",
-      "type": "string",
-      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
-      "verified": false,
-      "score": 0.3
-    },
-    {
-      "from": "image-cropper-component-v2",
-      "to": "image-dropzone-upload",
-      "fromPort": "onCropped",
-      "toPort": "className",
       "type": "string",
       "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
       "verified": false,
