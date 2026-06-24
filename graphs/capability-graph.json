@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782210327440,
+  "generatedAt": 1782299943700,
   "nodes": [
     {
       "id": "voice-authentication-system",
@@ -192,6 +192,25 @@
           "react-easy-crop"
         ]
       }
+    },
+    {
+      "id": "photo-download-app",
+      "title": "Photo Download Utility App (saves ImageDataURL to device)",
+      "category": "Web Components",
+      "profile": {
+        "language": "JavaScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component",
+        "framework": "React",
+        "uiDirectives": [
+          "React Hooks",
+          "Self-contained (no external deps)",
+          "Inline styles",
+          "Blob/object-URL download"
+        ]
+      }
     }
   ],
   "edges": [
@@ -207,6 +226,17 @@
       "score": 1
     },
     {
+      "from": "camera-capture-definitive",
+      "to": "photo-download-app",
+      "fromPort": "onCapture",
+      "toPort": "photo",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+      "verified": true,
+      "score": 1
+    },
+    {
       "from": "image-dropzone-upload",
       "to": "camera-capture-definitive",
       "fromPort": "onUpload",
@@ -262,6 +292,17 @@
       "score": 0.95
     },
     {
+      "from": "image-dropzone-upload",
+      "to": "photo-download-app",
+      "fromPort": "onUpload",
+      "toPort": "photo",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": true,
+      "score": 0.95
+    },
+    {
       "from": "image-cropper-component-v2",
       "to": "image-editor-component",
       "fromPort": "onCropped",
@@ -270,6 +311,17 @@
       "canonical": "ImageDataURL",
       "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
       "verified": false,
+      "score": 0.95
+    },
+    {
+      "from": "image-cropper-component-v2",
+      "to": "photo-download-app",
+      "fromPort": "onCropped",
+      "toPort": "photo",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
+      "verified": true,
       "score": 0.95
     },
     {
@@ -295,6 +347,26 @@
       "score": 0.85
     },
     {
+      "from": "photo-download-app",
+      "to": "camera-capture-definitive",
+      "fromPort": "onDownload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.8
+    },
+    {
+      "from": "photo-download-app",
+      "to": "camera-capture-definitive",
+      "fromPort": "onDownload",
+      "toPort": "facingMode",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.8
+    },
+    {
       "from": "image-dropzone-upload",
       "to": "new-inspection-report-generator",
       "fromPort": "onUpload",
@@ -337,6 +409,46 @@
       "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
       "verified": false,
       "score": 0.775
+    },
+    {
+      "from": "photo-download-app",
+      "to": "image-cropper-component-v2",
+      "fromPort": "onDownload",
+      "toPort": "cropShape",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.7
+    },
+    {
+      "from": "photo-download-app",
+      "to": "image-cropper-component-v2",
+      "fromPort": "onDownload",
+      "toPort": "outputType",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.7
+    },
+    {
+      "from": "camera-capture-definitive",
+      "to": "photo-download-app",
+      "fromPort": "onCapture",
+      "toPort": "filename",
+      "type": "string",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+      "verified": true,
+      "score": 0.65
+    },
+    {
+      "from": "photo-download-app",
+      "to": "camera-capture-definitive",
+      "fromPort": "onDownload",
+      "toPort": "imageType",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.65
     },
     {
       "from": "camera-capture-definitive",
@@ -399,6 +511,16 @@
       "score": 0.55
     },
     {
+      "from": "image-dropzone-upload",
+      "to": "photo-download-app",
+      "fromPort": "onUpload",
+      "toPort": "filename",
+      "type": "string",
+      "emits": "dataUrl - base64 data: URL (image/*) produced by FileReader.readAsDataURL",
+      "verified": true,
+      "score": 0.55
+    },
+    {
       "from": "image-cropper-component-v2",
       "to": "camera-capture-definitive",
       "fromPort": "onCropped",
@@ -417,6 +539,146 @@
       "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
       "verified": true,
       "score": 0.55
+    },
+    {
+      "from": "image-cropper-component-v2",
+      "to": "photo-download-app",
+      "fromPort": "onCropped",
+      "toPort": "filename",
+      "type": "string",
+      "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
+      "verified": true,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "inspection-report-generator",
+      "fromPort": "onDownload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "inspection-report-generator",
+      "fromPort": "onDownload",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onDownload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onDownload",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onDownload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onDownload",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "camera-photo-report-generator",
+      "fromPort": "onDownload",
+      "toPort": "title",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "markdown-renderer",
+      "fromPort": "onDownload",
+      "toPort": "markdown",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "image-cropper-component-v2",
+      "fromPort": "onDownload",
+      "toPort": "image",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onDownload",
+      "toPort": "photoUrl",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.475
+    },
+    {
+      "from": "photo-download-app",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onDownload",
+      "toPort": "photoUrl",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.475
+    },
+    {
+      "from": "photo-download-app",
+      "to": "fuzzy-search-definitive",
+      "fromPort": "onDownload",
+      "toPort": "query",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.45
+    },
+    {
+      "from": "photo-download-app",
+      "to": "image-dropzone-upload",
+      "fromPort": "onDownload",
+      "toPort": "className",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.45
     },
     {
       "from": "camera-capture-definitive",
@@ -485,6 +747,16 @@
       "toPort": "title",
       "type": "string",
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+      "verified": false,
+      "score": 0.4
+    },
+    {
+      "from": "photo-download-app",
+      "to": "camera-photo-report-generator",
+      "fromPort": "onDownload",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
       "verified": false,
       "score": 0.4
     },
@@ -675,6 +947,26 @@
       "toPort": "className",
       "type": "string",
       "emits": "croppedDataUrl — cropped image as a data: URL via canvas.toDataURL",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "photo-download-app",
+      "to": "markdown-editor-synthesis",
+      "fromPort": "onDownload",
+      "toPort": "value",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "photo-download-app",
+      "to": "image-editor-component",
+      "fromPort": "onDownload",
+      "toPort": "image",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
       "verified": false,
       "score": 0.3
     }
