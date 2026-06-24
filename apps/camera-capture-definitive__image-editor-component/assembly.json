@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782302059939,
+  "generatedAt": 1782302066478,
   "id": "camera-capture-definitive__image-editor-component",
   "appComponent": "AssembledApp",
   "chain": "Definitive Self-Contained Camera Capture Component → Image Cropper Component (react-easy-crop) → Image Editor Component",
