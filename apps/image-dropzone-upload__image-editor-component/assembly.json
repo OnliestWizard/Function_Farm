@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782210360453,
+  "generatedAt": 1782300248641,
   "id": "image-dropzone-upload__image-editor-component",
   "appComponent": "AssembledApp",
   "chain": "React Image Dropzone → onUpload(ImageDataURL) → Definitive Self-Contained Camera Capture Component → Image Cropper Component (react-easy-crop) → Image Editor Component",
