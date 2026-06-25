@@ -75,15 +75,15 @@ export function PhotoDownloader({ photo, filename = 'photo', onDownload, onRetak
 
   if (!photo) return null;
 
-  // Root grows with content (min-height, not fixed height) and scrolls vertically
-  // so the controls are always reachable below the image on any screen.
+  // Root grows with content and scrolls vertically so the controls are always
+  // reachable. We don't force a tall min-height here (that can push the buttons
+  // below the fold inside constrained parents).
   const wrap = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     gap: 16,
     padding: 16,
-    minHeight: '100vh',
     boxSizing: 'border-box',
     overflowY: 'auto',
     WebkitOverflowScrolling: 'touch',
@@ -97,7 +97,20 @@ export function PhotoDownloader({ photo, filename = 'photo', onDownload, onRetak
     borderRadius: 12,
     boxShadow: '0 8px 24px rgba(0,0,0,0.25)',
   };
-  const row = { display: 'flex', gap: 12 };
+  // Keep the controls pinned to the bottom so the Save button is always visible,
+  // no matter how tall the image is.
+  const row = {
+    display: 'flex',
+    gap: 12,
+    position: 'sticky',
+    bottom: 0,
+    width: '100%',
+    justifyContent: 'center',
+    padding: '16px 0',
+    background: 'rgba(0,0,0,0.6)',
+    backdropFilter: 'blur(4px)',
+    zIndex: 10,
+  };
   const btn = { padding: '14px 28px', borderRadius: 12, fontWeight: 700, border: 'none', cursor: 'pointer' };
 
   return (
