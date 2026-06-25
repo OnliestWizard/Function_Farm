@@ -12,7 +12,8 @@
     "Pairs with camera-capture-definitive (consumes its ImageDataURL output)",
     "From-scratch download/save logic minted to fill the missing save-to-device half",
     "Tuned (AI): Added optional `photo` prop to PhotoDownloaderApp; uses it as the photo when provided, otherwise falls back to the file-picker behavior. (+$0.0783 claude-opus-4-8)",
-    "Tuned (AI): Updated PhotoDownloader layout: root container now uses min-height:100vh with vertical scroll, preview image capped at max-height:60vh with width:100% and object-fit:contain, keeping the save button in normal flow below the image. (+$0.0874 claude-opus-4-8)"
+    "Tuned (AI): Updated PhotoDownloader layout: root container now uses min-height:100vh with vertical scroll, preview image capped at max-height:60vh with width:100% and object-fit:contain, keeping the save button in normal flow below the image. (+$0.0874 claude-opus-4-8)",
+    "Tuned (AI): Made the controls row sticky to the bottom so the Save button is always visible, and removed the forced 100vh min-height that pushed it off-screen. (+$0.0981 claude-opus-4-8)"
   ],
   "usage": {
     "provider": "anthropic",
@@ -75,5 +76,5 @@
       "type": "ai"
     }
   ],
-  "digest": "69dc9bc6668d0d52a539821109210349e0e7ab70efa45bb1b369dc8b9c120f1d"
+  "digest": "300c09f3b60ab510c36316f699b50b03fea270d27e763eac138b6a5ac06aeb89"
 }
