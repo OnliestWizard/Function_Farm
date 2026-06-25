@@ -1,25 +1,36 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782320896548,
+  "generatedAt": 1782385788087,
   "id": "camera-capture-definitive__photo-download-app",
   "appComponent": "AssembledApp",
-  "chain": "Definitive Self-Contained Camera Capture Component → Photo Download Utility App (saves ImageDataURL to device)",
+  "chain": "Definitive Self-Contained Camera Capture Component → Self-Contained React Image Cropper (react-easy-crop → onCropped) → Photo Download Utility App (saves ImageDataURL to device)",
   "nodeIds": [
     "camera-capture-definitive",
+    "react-easy-crop-self-contained",
     "photo-download-app"
   ],
-  "score": 1,
-  "wiredCount": 1,
+  "score": 0.975,
+  "wiredCount": 2,
   "stubCount": 0,
   "steps": [
     {
       "from": "camera-capture-definitive",
-      "to": "photo-download-app",
+      "to": "react-easy-crop-self-contained",
       "fromPort": "onCapture",
-      "toPort": "photo",
+      "toPort": "image",
       "type": "string",
       "canonical": "ImageDataURL",
       "score": 1,
+      "callbackWired": true
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "photo-download-app",
+      "fromPort": "onCropped",
+      "toPort": "photo",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "score": 0.95,
       "callbackWired": true
     }
   ]
