@@ -1,5 +1,12 @@
 [
   {
+    "version": "1782385773468_69dc9bc6",
+    "digest": "69dc9bc6668d0d52a539821109210349e0e7ab70efa45bb1b369dc8b9c120f1d",
+    "commitSha": "d432b850899e9d6751385d4f5f007dc2c20fc653",
+    "timestamp": 1782385773468,
+    "note": "Tuned (AI): Updated PhotoDownloader layout: root container now uses min-height:100vh with vertical scroll, preview image capped at max-height:60vh with width:100% and object-fit:contain, keeping the save button in normal flow below the image. (+$0.0874 claude-opus-4-8)"
+  },
+  {
     "version": "1782319684845_bb4dc65c",
     "digest": "bb4dc65cb7ea3421fbfa4f8693934608713f9de1f0bd850c5670fd2e7ebfc2e5",
     "commitSha": "67417b500651bf9d9738a3d7eeb8690c43f6d4e8",
