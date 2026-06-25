@@ -1,0 +1,114 @@
+{
+  "sourceTrace": [
+    {
+      "repo": "ValentinH/react-easy-crop",
+      "path": "docs/src/components/cropImage.ts",
+      "lines": "1-73",
+      "license": "MIT"
+    },
+    {
+      "repo": "ValentinH/react-easy-crop",
+      "path": "docs/src/components/CropperExample.tsx",
+      "lines": "1-130",
+      "license": "MIT"
+    },
+    {
+      "repo": "ValentinH/react-easy-crop",
+      "path": "LICENSE",
+      "lines": "1-21",
+      "license": "MIT"
+    }
+  ],
+  "improvements": [
+    "Inlined getRadianAngle/rotateSize so getCroppedImg no longer imports ../../../src/helpers — fully self-contained",
+    "Switched the helper's toBlob/URL.createObjectURL output to canvas.toDataURL('image/jpeg') so it emits a true ImageDataURL string",
+    "Exposed an explicit required onCropped(croppedDataUrl) output callback instead of only setting internal croppedImage state",
+    "Added an aspect prop and busy/disabled handling around the Crop action",
+    "Removed docusaurus-specific bits (useBaseUrl, ExampleFrame/ControlGroup, video mode, upload input) that are irrelevant to a reusable cropper"
+  ],
+  "removals": [
+    "import { getRadianAngle, rotateSize } from '../../../src/helpers'",
+    "@docusaurus/useBaseUrl import and ControlGroup/ExampleFrame UI scaffolding",
+    "video media branch and file-upload input from the docs example"
+  ],
+  "confidence": 0.9,
+  "lineage": [
+    "ValentinH/react-easy-crop docs CropperExample.tsx + cropImage.ts → inlined, toDataURL, onCropped output → ReactEasyCropper.jsx"
+  ],
+  "usage": {
+    "provider": "anthropic",
+    "model": "claude-opus-4-8",
+    "inputTokens": 26289,
+    "outputTokens": 5416,
+    "costUsd": 0.266845
+  },
+  "interfaces": {
+    "inputs": [
+      {
+        "name": "image",
+        "type": "string",
+        "verified": true,
+        "canonical": "ImageDataURL"
+      },
+      {
+        "name": "aspect",
+        "type": "number",
+        "verified": true,
+        "default": "4/3"
+      },
+      {
+        "name": "cropShape",
+        "type": "string",
+        "default": "rect",
+        "verified": true
+      },
+      {
+        "name": "showGrid",
+        "type": "boolean",
+        "default": true,
+        "verified": true
+      }
+    ],
+    "outputs": [
+      {
+        "name": "onCropped",
+        "type": "string",
+        "verified": true,
+        "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+        "canonical": "ImageDataURL"
+      }
+    ],
+    "dependencies": [
+      "react",
+      "react-easy-crop"
+    ]
+  },
+  "confidenceMatrix": [
+    {
+      "dimension": "groundedInRepo",
+      "score": 0.95
+    },
+    {
+      "dimension": "selfContained",
+      "score": 0.92
+    },
+    {
+      "dimension": "specFit",
+      "score": 0.9
+    },
+    {
+      "dimension": "buildability",
+      "score": 0.85
+    }
+  ],
+  "effectiveLicense": "MIT",
+  "origin": "harvested",
+  "contributors": [
+    {
+      "model": "claude-opus-4-8",
+      "lines": "1-165",
+      "type": "ai"
+    }
+  ],
+  "digest": "246fc895a5bfc33a6f2963ccd0d314412877e02e4a598fb509422ed6bb46b965"
+}

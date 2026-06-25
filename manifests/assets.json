@@ -375,5 +375,31 @@
     "relatesTo": [
       "camera-capture-definitive"
     ]
+  },
+  {
+    "id": "react-easy-crop-self-contained",
+    "title": "Self-Contained React Image Cropper (react-easy-crop → onCropped)",
+    "category": "UI Components",
+    "targetPath": "capabilities/web/imageCropper/ReactEasyCropper.jsx",
+    "status": "approved",
+    "confidence": 0.9,
+    "digest": "246fc895a5bfc33a6f2963ccd0d314412877e02e4a598fb509422ed6bb46b965",
+    "profile": {
+      "language": "JavaScript",
+      "targets": [
+        "web"
+      ],
+      "format": "React Component (JSX)",
+      "framework": "React",
+      "uiDirectives": [
+        "React Hooks",
+        "react-easy-crop",
+        "Self-contained (no local imports)",
+        "Inline styles"
+      ]
+    },
+    "relatesTo": [
+      "image-cropper-component-v2"
+    ]
   }
 ]
