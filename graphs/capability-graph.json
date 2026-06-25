@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782319720846,
+  "generatedAt": 1782384871849,
   "nodes": [
     {
       "id": "voice-authentication-system",
@@ -178,6 +178,25 @@
           "Blob/object-URL download"
         ]
       }
+    },
+    {
+      "id": "react-easy-crop-self-contained",
+      "title": "Self-Contained React Image Cropper (react-easy-crop → onCropped)",
+      "category": "UI Components",
+      "profile": {
+        "language": "JavaScript",
+        "targets": [
+          "web"
+        ],
+        "format": "React Component (JSX)",
+        "framework": "React",
+        "uiDirectives": [
+          "React Hooks",
+          "react-easy-crop",
+          "Self-contained (no local imports)",
+          "Inline styles"
+        ]
+      }
     }
   ],
   "edges": [
@@ -189,6 +208,28 @@
       "type": "string",
       "canonical": "ImageDataURL",
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+      "verified": true,
+      "score": 1
+    },
+    {
+      "from": "camera-capture-definitive",
+      "to": "react-easy-crop-self-contained",
+      "fromPort": "onCapture",
+      "toPort": "image",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+      "verified": true,
+      "score": 1
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "camera-capture-definitive",
+      "fromPort": "onCropped",
+      "toPort": "imageType",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
       "verified": true,
       "score": 1
     },
@@ -212,6 +253,28 @@
       "canonical": "ImageDataURL",
       "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
       "verified": false,
+      "score": 0.95
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "image-editor-component",
+      "fromPort": "onCropped",
+      "toPort": "image",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.95
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "photo-download-app",
+      "fromPort": "onCropped",
+      "toPort": "photo",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": true,
       "score": 0.95
     },
     {
@@ -246,6 +309,38 @@
       "score": 0.8
     },
     {
+      "from": "react-easy-crop-self-contained",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onCropped",
+      "toPort": "photoUrl",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.775
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onCropped",
+      "toPort": "photoUrl",
+      "type": "string",
+      "canonical": "ImageDataURL",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.775
+    },
+    {
+      "from": "photo-download-app",
+      "to": "react-easy-crop-self-contained",
+      "fromPort": "onDownload",
+      "toPort": "cropShape",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.7
+    },
+    {
       "from": "camera-capture-definitive",
       "to": "photo-download-app",
       "fromPort": "onCapture",
@@ -264,6 +359,16 @@
       "emits": "final saved filename (e.g. photo.jpg)",
       "verified": true,
       "score": 0.65
+    },
+    {
+      "from": "camera-capture-definitive",
+      "to": "react-easy-crop-self-contained",
+      "fromPort": "onCapture",
+      "toPort": "cropShape",
+      "type": "string",
+      "emits": "dataUrl (image/jpeg base64 data URL) of the confirmed photo",
+      "verified": true,
+      "score": 0.55
     },
     {
       "from": "photo-download-app",
@@ -342,6 +447,46 @@
       "toPort": "markdown",
       "type": "string",
       "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.55
+    },
+    {
+      "from": "photo-download-app",
+      "to": "react-easy-crop-self-contained",
+      "fromPort": "onDownload",
+      "toPort": "image",
+      "type": "string",
+      "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": true,
+      "score": 0.55
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "camera-capture-definitive",
+      "fromPort": "onCropped",
+      "toPort": "title",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": true,
+      "score": 0.55
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "camera-capture-definitive",
+      "fromPort": "onCropped",
+      "toPort": "facingMode",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": true,
+      "score": 0.55
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "photo-download-app",
+      "fromPort": "onCropped",
+      "toPort": "filename",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
       "verified": true,
       "score": 0.55
     },
@@ -482,6 +627,86 @@
       "toPort": "image",
       "type": "string",
       "emits": "final saved filename (e.g. photo.jpg)",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "inspection-report-generator",
+      "fromPort": "onCropped",
+      "toPort": "title",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "inspection-report-generator",
+      "fromPort": "onCropped",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onCropped",
+      "toPort": "title",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "new-inspection-report-generator",
+      "fromPort": "onCropped",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onCropped",
+      "toPort": "title",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "inspection-report-generator-enhanced",
+      "fromPort": "onCropped",
+      "toPort": "notes",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "camera-photo-report-generator",
+      "fromPort": "onCropped",
+      "toPort": "title",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
+      "verified": false,
+      "score": 0.3
+    },
+    {
+      "from": "react-easy-crop-self-contained",
+      "to": "fuzzy-search-definitive",
+      "fromPort": "onCropped",
+      "toPort": "query",
+      "type": "string",
+      "emits": "croppedDataUrl (image/jpeg data URL from canvas.toDataURL)",
       "verified": false,
       "score": 0.3
     }
