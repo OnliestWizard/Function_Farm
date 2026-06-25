@@ -75,8 +75,28 @@ export function PhotoDownloader({ photo, filename = 'photo', onDownload, onRetak
 
   if (!photo) return null;
 
-  const wrap = { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16, padding: 16 };
-  const img = { maxWidth: '100%', maxHeight: '60vh', borderRadius: 12, boxShadow: '0 8px 24px rgba(0,0,0,0.25)' };
+  // Root grows with content (min-height, not fixed height) and scrolls vertically
+  // so the controls are always reachable below the image on any screen.
+  const wrap = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: 16,
+    padding: 16,
+    minHeight: '100vh',
+    boxSizing: 'border-box',
+    overflowY: 'auto',
+    WebkitOverflowScrolling: 'touch',
+  };
+  // Cap the preview so it never crowds out the buttons below it.
+  const img = {
+    width: '100%',
+    maxWidth: '100%',
+    maxHeight: '60vh',
+    objectFit: 'contain',
+    borderRadius: 12,
+    boxShadow: '0 8px 24px rgba(0,0,0,0.25)',
+  };
   const row = { display: 'flex', gap: 12 };
   const btn = { padding: '14px 28px', borderRadius: 12, fontWeight: 700, border: 'none', cursor: 'pointer' };
 
