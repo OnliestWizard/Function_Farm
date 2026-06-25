@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": 1782386065777,
+  "generatedAt": 1782386190376,
   "id": "react-easy-crop-self-contained__photo-download-app",
   "appComponent": "AssembledApp",
   "chain": "Self-Contained React Image Cropper (react-easy-crop → onCropped) → Definitive Self-Contained Camera Capture Component → Photo Download Utility App (saves ImageDataURL to device)",
