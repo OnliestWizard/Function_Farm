@@ -1,5 +1,12 @@
 [
   {
+    "version": "1782386457572_300c09f3",
+    "digest": "300c09f3b60ab510c36316f699b50b03fea270d27e763eac138b6a5ac06aeb89",
+    "commitSha": "dca7f0329832c118fc7991c9baed2ba5b8c39da0",
+    "timestamp": 1782386457572,
+    "note": "Tuned (AI): Made the controls row sticky to the bottom so the Save button is always visible, and removed the forced 100vh min-height that pushed it off-screen. (+$0.0981 claude-opus-4-8)"
+  },
+  {
     "version": "1782385773468_69dc9bc6",
     "digest": "69dc9bc6668d0d52a539821109210349e0e7ab70efa45bb1b369dc8b9c120f1d",
     "commitSha": "d432b850899e9d6751385d4f5f007dc2c20fc653",
